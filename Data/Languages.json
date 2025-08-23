@@ -1,0 +1,11 @@
+[
+  {
+    "Id": 1,
+    "Name": "English",
+    "Family": "Germanic",
+    "WritingSystem": "Latin",
+    "Speakers": 380000000,
+    "NativeCountries": [ "United Kingdom", "United States", "Canada", "Australia", "Ireland", "New Zealand", "Liberia", "Guyana" ],
+    "Sentences": [ "How can I help you?", "It's a beautiful day!", "Let's go to the store tomorrow." ]
+  }
+]
