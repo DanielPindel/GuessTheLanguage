@@ -3,9 +3,69 @@
     "Id": 1,
     "Name": "English",
     "Family": "Germanic",
-    "WritingSystem": "Latin",
-    "Speakers": 380000000,
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 1457000000,
     "NativeCountries": [ "United Kingdom", "United States", "Canada", "Australia", "Ireland", "New Zealand", "Liberia", "Guyana" ],
-    "Sentences": [ "How can I help you?", "It's a beautiful day!", "Let's go to the store tomorrow." ]
+    "Sentences": [
+      "How can I help you?",
+      "It's a beautiful day!",
+      "Let's go to the store tomorrow."
+    ]
+  },
+
+  {
+    "Id": 2,
+    "Name": "Spanish",
+    "Family": "Italic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 498000000,
+    "NativeCountries": [ "Spain", "Mexico", "El Salvador", "Bolivia", "Colombia" ],
+    "Sentences": [
+      "Voy a tener que llegar un poco tarde a la reunión.",
+      "El tráfico está especialmente pesado esta mañana.",
+      "Esta película es mucho mejor de lo que esperaba."
+    ]
+  },
+
+  {
+    "Id": 3,
+    "Name": "Korean",
+    "Family": "Koreanic",
+    "WritingSystems": [ "Hangul", "Hanja" ],
+    "Speakers": 81000000,
+    "NativeCountries": [ "South Korea", "North Korea" ],
+    "Sentences": [
+      "여기서 가장 가까운 지하철역이 어디인가요?",
+      "커피 한잔 하러 갈 시간 좀 낼 수 있어?",
+      "제 생각에는 그 계획이 현실적으로 들리지 않아요."
+    ]
+  },
+
+  {
+    "Id": 4,
+    "Name": "Polish",
+    "Family": "Slavic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 43000000,
+    "NativeCountries": [ "Poland", "Lithuania" ],
+    "Sentences": [
+      "Zapomniałam, gdzie położyłam klucze do domu.",
+      "Według mnie ten kolor zupełnie do ciebie nie pasuje.",
+      "Czy kiedykolwiek jadłeś prawdziwe polskie pierogi?"
+    ]
+  },
+
+  {
+    "Id": 5,
+    "Name": "German",
+    "Family": "Germanic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 95000000,
+    "NativeCountries": [ "Germany", "Switzerland", "Austria", "Liechtenstein", "Luxembourg", "Belgium" ],
+    "Sentences": [
+      "Kannst du mir kurz mit den schweren Tüten helfen?",
+      "Ich muss auf dem Weg nach Hause noch einkaufen gehen.",
+      "Der Zug hat heute Morgen leider zehn Minuten Verspätung."
+    ]
   }
 ]
