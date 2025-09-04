@@ -1,12 +1,45 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Guess the language";
 }
 
 <div class="container">
-    <h1>Guess The Language</h1>
+    <h1>Language Guesser</h1>
+
     <div class="sentence-display">
-        <p><em>@Model.TargetSentence</em></p>
+        <p>Today's sentence: <em>@Model.TargetSentence</em></p>
     </div>
+
+    @if (!Model.GameCompleted)
+    {
+        <form hx-post="@Url.Page("Index", "Guess")"
+              hx-target="#guesses-container"
+              hx-swap="beforeend"
+              class="guess-form">
+            <select name="languageId" required>
+                <option value="">Select a language</option>
+                @foreach (var language in Model.Languages)
+                {
+                    <option value="@language.Id">@language.Name</option>
+                }
+            </select>
+            <button type="submit">Guess</button>
+        </form>
+    }
+
+    <div id="guesses-container">
+        @foreach (var result in Model.PreviousGuesses)
+        {
+            <partial name="_GuessResult" model="result" />
+        }
+    </div>
+
+    @if (Model.GameCompleted)
+    {
+        <div class="game-completed">
+            <p>Game over! You've used all your guesses.</p>
+            <p>The language was: <strong>@Model.TargetLanguage.Name</strong></p>
+        </div>
+    }
 </div>

@@ -1,0 +1,84 @@
+﻿@model GuessTheLanguage.Models.GuessResult
+
+<div class="guess-result @(Model.IsCorrect ? "correct" : "")">
+    <h4>Guess #@Model.GuessNumber: @Model.GuessedLanguage.Name</h4>
+
+    <table class="comparison-table">
+        <tr>
+            <th>Property</th>
+            <th>Your Guess</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>Language</td>
+            <td>@Model.GuessedLanguage.Name</td>
+            <td class="@(Model.NameMatch ? "full-match" : "no-match")">
+                @(Model.NameMatch ? "✓" : "✗")
+            </td>
+        </tr>
+        <tr>
+            <td>Family</td>
+            <td>@Model.GuessedLanguage.Family</td>
+            <td class="@(Model.FamilyMatch ? "full-match" : "no-match")">
+                @(Model.FamilyMatch ? "✓" : "✗")
+            </td>
+        </tr>
+        <tr>
+            <td>Writing System</td>
+            <td>@string.Join(", ", Model.GuessedLanguage.WritingSystems)</td>
+            <td class="@GetMatchClass(Model.WritingSystemsMatch)">
+                @GetMatchSymbol(Model.WritingSystemsMatch)
+            </td>
+        </tr>
+        <tr>
+            <td>Speakers</td>
+            <td>@Model.GuessedLanguage.Speakers.ToString("N0") @Model.SpeakersComparison.Direction</td>
+            <td class="@GetMatchClass(Model.SpeakersComparison.Match)">
+                @GetMatchSymbol(Model.SpeakersComparison.Match)
+            </td>
+        </tr>
+        <tr>
+            <td>Native Countries</td>
+            <td>@string.Join(", ", Model.GuessedLanguage.NativeCountries)</td>
+            <td class="@GetMatchClass(Model.NativeCountriesMatch)">
+                @GetMatchSymbol(Model.NativeCountriesMatch)
+            </td>
+        </tr>
+    </table>
+
+    @if (Model.IsCorrect)
+    {
+        <div class="correct-guess">
+            <p>Congratulations! You guessed correctly!</p>
+        </div>
+    }
+
+    @if (Model.GameCompleted && !Model.IsCorrect)
+    {
+        <div class="game-completed">
+            <p>Game over! The language was: <strong>@Model.TargetLanguage.Name</strong></p>
+        </div>
+    }
+</div>
+
+@functions {
+    string GetMatchClass(GuessTheLanguage.Models.MatchResult match)
+    {
+        return match switch
+        {
+            GuessTheLanguage.Models.MatchResult.FullMatch => "full-match",
+            GuessTheLanguage.Models.MatchResult.PartialMatch => "partial-match",
+            _ => "no-match"
+        };
+    }
+
+    string GetMatchSymbol(GuessTheLanguage.Models.MatchResult match)
+    {
+        return match switch
+        {
+            GuessTheLanguage.Models.MatchResult.FullMatch => "✓",
+            GuessTheLanguage.Models.MatchResult.PartialMatch => "≈",
+            _ => "✗"
+        };
+    }
+}

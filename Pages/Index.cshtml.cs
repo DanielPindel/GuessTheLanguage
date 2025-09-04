@@ -20,7 +20,8 @@ public class IndexModel : PageModel
     public string TargetSentence { get; set; }
     public List<Language> Languages { get; set; }
     public bool GameCompleted { get; set; }
-    public string TargetLanguage { get; set; }
+    public Language TargetLanguage { get; set; }
+    public List<UserGuess> PreviousGuesses { get; set; } = new List<UserGuess>();
 
     public void OnGet()
     {
@@ -28,21 +29,26 @@ public class IndexModel : PageModel
         TargetSentence = CurrentGame.TargetSentence;
         Languages = _gameService.GetAllLanguages();
         GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id);
-        TargetLanguage = CurrentGame.Language.Name;
+        TargetLanguage = CurrentGame.Language;
+        var PreviousGuesses = _gameService.GetGuesses(CurrentGame.Id);
+        foreach (var guess in PreviousGuesses)
+        {
+            var result = _gameService.CompareGuess(guess.LanguageId, CurrentGame.LanguageId);
+            result.GuessNumber = guess.GuessNumber;
+            result.GameCompleted = GameCompleted;
+            PreviousGuesses.Add(guess);
+        }
     }
     public IActionResult OnPostGuess(int languageId)
     {
         CurrentGame = _gameService.GetTodaysGame();
 
-        if (_gameService.IsGameCompleted(CurrentGame.Id))
-        {
-            return Content("<div class='error'>Game completed</div>");
-        }
         var result = _gameService.CompareGuess(CurrentGame.LanguageId, languageId);
         _gameService.RecordGuess(CurrentGame.Id, languageId);
 
-        GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id);
+        result.GuessNumber = _gameService.GetGuessCount(CurrentGame.Id);
+        result.GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id);
 
-        return Partial("_GuessResult", result);
+        return Partial("_GamePartial", result);
     }
 }

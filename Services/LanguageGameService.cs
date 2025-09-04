@@ -10,17 +10,21 @@ public interface ILanguageGameService
     List<Language> GetAllLanguages();
     bool IsGameCompleted(int gameSessionId);
     void RecordGuess(int gameSessionId, int languageId);
+    int GetGuessCount(int gameSessionId);
+    public List<UserGuess> GetGuesses(int gameSessionId);
 }
 
 public class LanguageGameService: ILanguageGameService
 {
     private readonly List<Language> _languages;
     private readonly Dictionary<DateTime, GameSession> _gameSessions;
+    private readonly Dictionary<int, List<UserGuess>> _userGuesses;
 
     public LanguageGameService()
     {
         _languages = LoadLanguagesFromJson();
         _gameSessions = new Dictionary<DateTime, GameSession>();
+        _userGuesses = new Dictionary<int, List<UserGuess>>();
     }
 
     public GameSession GetTodaysGame()
@@ -39,6 +43,7 @@ public class LanguageGameService: ILanguageGameService
 
         var newSession = new GameSession()
         {
+            Id = seed,
             Date = today,
             LanguageId = targetLanguage.Id,
             Language = targetLanguage,
@@ -57,6 +62,8 @@ public class LanguageGameService: ILanguageGameService
 
         return new GuessResult()
         {
+            GuessedLanguage = guess,
+            TargetLanguage = target,
             NameMatch = guess.Name == target.Name,
             FamilyMatch = guess.Family == target.Family,
             WritingSystemsMatch = GetMatchResult(guess.WritingSystems, target.WritingSystems),
@@ -100,11 +107,38 @@ public class LanguageGameService: ILanguageGameService
     }
     public void RecordGuess(int gameSessionId, int languageId)
     {
+        if (!_userGuesses.ContainsKey(gameSessionId))
+        {
+            _userGuesses[gameSessionId] = new List<UserGuess>();
+        }
 
+        var guessCount = _userGuesses[gameSessionId].Count + 1;
+
+        _userGuesses[gameSessionId].Add(new UserGuess()
+        {
+            GameSessionId = gameSessionId,
+            LanguageId = languageId,
+            GuessNumber = guessCount
+        });
     }
     public bool IsGameCompleted(int gameSessionId)
     {
-        return false;
+        if (!_userGuesses.ContainsKey(gameSessionId))
+        {
+            return false;
+        }
+
+        var guesses = _userGuesses[gameSessionId];
+
+        return guesses.Count >= 6 || guesses.Any(g => g.LanguageId == GetTodaysGame().LanguageId);
+    }
+    public int GetGuessCount(int gameSessionId)
+    {
+        return _userGuesses.ContainsKey(gameSessionId) ? _userGuesses[gameSessionId].Count : 0;
+    }
+    public List<UserGuess> GetGuesses(int gameSessionId)
+    {
+        return _userGuesses.ContainsKey(gameSessionId) ? _userGuesses[gameSessionId] : new List<UserGuess>();
     }
     private List<Language> LoadLanguagesFromJson()
     {
