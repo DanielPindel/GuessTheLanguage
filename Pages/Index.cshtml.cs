@@ -21,7 +21,8 @@ public class IndexModel : PageModel
     public List<Language> Languages { get; set; }
     public bool GameCompleted { get; set; }
     public Language TargetLanguage { get; set; }
-    public List<UserGuess> PreviousGuesses { get; set; } = new List<UserGuess>();
+    public List<GuessResult> PreviousGuesses = new List<GuessResult>();
+    public bool IsCorrectGuess => PreviousGuesses.Any(r => r.NameMatch);
 
     public void OnGet()
     {
@@ -30,6 +31,7 @@ public class IndexModel : PageModel
         Languages = _gameService.GetAllLanguages();
         GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id);
         TargetLanguage = CurrentGame.Language;
+
         var PreviousGuesses = _gameService.GetGuesses(CurrentGame.Id);
         foreach (var guess in PreviousGuesses)
         {
@@ -50,5 +52,18 @@ public class IndexModel : PageModel
         result.GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id);
 
         return Partial("_GamePartial", result);
+    }
+    public string GetCellClass(bool match)
+    {
+        return match ? "table-success" : "table-danger";
+    }
+    public string GetCellClass(MatchResult match)
+    {
+        return match switch
+        {
+            MatchResult.FullMatch => "table-success",
+            MatchResult.PartialMatch => "table-warning",
+            _ => "table-danger"
+        };
     }
 }

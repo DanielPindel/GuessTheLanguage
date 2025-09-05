@@ -20,3 +20,64 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.autocomplete-container
+{
+    position: relative;
+}
+
+.autocomplete-dropdown
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none;
+}
+
+.autocomplete-table
+{
+    margin-bottom: 0;
+}
+
+.autocomplete-item
+{
+    cursor: pointer;
+}
+
+    .autocomplete-item:hover
+    {
+        background-color: #f8f9fa;
+    }
+
+.table-success
+{
+    background-color: #d4edda !important;
+}
+
+.table-warning
+{
+    background-color: #fff3cd !important;
+}
+
+.table-danger
+{
+    background-color: #f8d7da !important;
+}
+
+.toast
+{
+    background-color: #28a745;
+    color: white;
+}
+
+    .toast.bg-danger
+    {
+        background-color: #dc3545;
+    }

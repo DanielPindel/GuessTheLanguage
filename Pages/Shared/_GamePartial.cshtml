@@ -1,84 +1,208 @@
-﻿@model GuessTheLanguage.Models.GuessResult
+﻿@using GuessTheLanguage.Models
+@model IndexModel
 
-<div class="guess-result @(Model.IsCorrect ? "correct" : "")">
-    <h4>Guess #@Model.GuessNumber: @Model.GuessedLanguage.Name</h4>
-
-    <table class="comparison-table">
-        <tr>
-            <th>Property</th>
-            <th>Your Guess</th>
-            <th>Result</th>
-        </tr>
-        <tr>
-            <td>Language</td>
-            <td>@Model.GuessedLanguage.Name</td>
-            <td class="@(Model.NameMatch ? "full-match" : "no-match")">
-                @(Model.NameMatch ? "✓" : "✗")
-            </td>
-        </tr>
-        <tr>
-            <td>Family</td>
-            <td>@Model.GuessedLanguage.Family</td>
-            <td class="@(Model.FamilyMatch ? "full-match" : "no-match")">
-                @(Model.FamilyMatch ? "✓" : "✗")
-            </td>
-        </tr>
-        <tr>
-            <td>Writing System</td>
-            <td>@string.Join(", ", Model.GuessedLanguage.WritingSystems)</td>
-            <td class="@GetMatchClass(Model.WritingSystemsMatch)">
-                @GetMatchSymbol(Model.WritingSystemsMatch)
-            </td>
-        </tr>
-        <tr>
-            <td>Speakers</td>
-            <td>@Model.GuessedLanguage.Speakers.ToString("N0") @Model.SpeakersComparison.Direction</td>
-            <td class="@GetMatchClass(Model.SpeakersComparison.Match)">
-                @GetMatchSymbol(Model.SpeakersComparison.Match)
-            </td>
-        </tr>
-        <tr>
-            <td>Native Countries</td>
-            <td>@string.Join(", ", Model.GuessedLanguage.NativeCountries)</td>
-            <td class="@GetMatchClass(Model.NativeCountriesMatch)">
-                @GetMatchSymbol(Model.NativeCountriesMatch)
-            </td>
-        </tr>
-    </table>
-
-    @if (Model.IsCorrect)
-    {
-        <div class="correct-guess">
-            <p>Congratulations! You guessed correctly!</p>
+@if (Model.IsCorrectGuess || Model.GameCompleted)
+{
+    <div class="alert @(Model.GameCompleted && !Model.IsCorrectGuess ? "alert-warning" : "alert-success") text-center mb-4">
+        <h3>@(Model.GameCompleted && !Model.IsCorrectGuess ? "Game over! The language was:" : "You guessed correctly!")</h3>
+        <div class="d-flex justify-content-center align-items-center">
+            <div>
+                <h4 style="text-align: left; padding-left: 20px">@Model.TargetLanguage.Name</h4>
+                <div class="text-muted" style="text-align: left; padding-left: 20px">
+                    <div><strong>Family:</strong> @Model.TargetLanguage.Family</div>
+                    <div><strong>Writing Systems:</strong> @string.Join(", ", Model.TargetLanguage.WritingSystems)</div>
+                    <div><strong>Speakers:</strong> @Model.TargetLanguage.Speakers.ToString("N0")</div>
+                    <div><strong>Native Countries:</strong> @string.Join(", ", Model.TargetLanguage.NativeCountries)</div>
+                </div>
+            </div>
         </div>
-    }
-
-    @if (Model.GameCompleted && !Model.IsCorrect)
-    {
-        <div class="game-completed">
-            <p>Game over! The language was: <strong>@Model.TargetLanguage.Name</strong></p>
+        <div class="text-center mt-3">
+            <button id="shareBtn" class="btn btn-outline-success" onclick="shareResults()">
+                <i class="fas fa-share"></i> Share Results
+            </button>
         </div>
-    }
+
+        <div id="shareToast" class="toast position-fixed bottom-0 start-50 translate-middle m-3" style="z-index: 1100; display: none;">
+            <div class="toast-body"></div>
+        </div>
+    </div>
+}
+
+<div class="alert alert-info text-center mb-4">
+    <h4>Today's Sentence</h4>
+    <p class="mb-0 fs-5"><em>@Model.TargetSentence</em></p>
 </div>
 
-@functions {
-    string GetMatchClass(GuessTheLanguage.Models.MatchResult match)
+@if (!Model.IsCorrectGuess && !Model.GameCompleted)
+{
+    <form method="post"
+          hx-post="@Url.Page("Index")"
+          hx-target="#game-container"
+          hx-swap="morph:outerHTML"
+          class="mb-4"
+          id="guessForm">
+        <input type="hidden" id="selectedLanguageId" name="languageId" />
+        <div class="autocomplete-container">
+            <div class="input-group">
+                <input type="text"
+                       class="form-control"
+                       placeholder="Enter language name..."
+                       autocomplete="off"
+                       id="guessInput"
+                       aria-expanded="false"
+                       style="font-size: 1rem" />
+                <button type="submit" class="btn btn-primary">Guess</button>
+            </div>
+            <div class="autocomplete-dropdown" id="languageDropdown" style="display: none;">
+                <table class="table table-sm autocomplete-table">
+                    <tbody>
+                        @foreach (var language in Model.Languages.OrderBy(l => l.Name))
+                        {
+                            <tr class="autocomplete-item" data-value="@language.Name" data-id="@language.Id">
+                                <td>@language.Name</td>
+                                <td class="text-muted">@language.Family</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        @Html.AntiForgeryToken()
+    </form>
+}
+
+@if (Model.PreviousGuesses.Any())
+{
+    @if (!Model.IsCorrectGuess && !Model.GameCompleted)
     {
-        return match switch
-        {
-            GuessTheLanguage.Models.MatchResult.FullMatch => "full-match",
-            GuessTheLanguage.Models.MatchResult.PartialMatch => "partial-match",
-            _ => "no-match"
-        };
+        <div class="text-center mb-3">
+            @Html.AntiForgeryToken()
+            <button class="btn btn-danger"
+                    hx-post="@Url.Page("Index", "GiveUp")"
+                    hx-target="#game-container"
+                    hx-swap="outerHTML">
+                Give Up
+            </button>
+        </div>
     }
 
-    string GetMatchSymbol(GuessTheLanguage.Models.MatchResult match)
-    {
-        return match switch
-        {
-            GuessTheLanguage.Models.MatchResult.FullMatch => "✓",
-            GuessTheLanguage.Models.MatchResult.PartialMatch => "≈",
-            _ => "✗"
-        };
-    }
+    <div class="table-responsive" style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+        <table class="table table-bordered" style="min-width: 600px">
+            <thead class="table-dark">
+                <tr>
+                    <th>Language</th>
+                    <th>Family</th>
+                    <th>Writing System</th>
+                    <th>Speakers</th>
+                    <th>Native Countries</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var guess in Model.PreviousGuesses.AsEnumerable().Reverse())
+                {
+                    <tr>
+                        <td class="@Model.GetCellClass(guess.NameMatch)">
+                            @guess.GuessedLanguage.Name
+                        </td>
+                        <td class="@Model.GetCellClass(guess.FamilyMatch)">
+                            @guess.GuessedLanguage.Family
+                        </td>
+                        <td class="@Model.GetCellClass(guess.WritingSystemsMatch)">
+                            @string.Join(", ", guess.GuessedLanguage.WritingSystems)
+                        </td>
+                        <td class="@Model.GetCellClass(guess.SpeakersComparison.Match)">
+                            @guess.GuessedLanguage.Speakers.ToString("N0")
+                            @if (!string.IsNullOrEmpty(guess.SpeakersComparison.Direction))
+                            {
+                                <span>@guess.SpeakersComparison.Direction</span>
+                            }
+                        </td>
+                        <td class="@Model.GetCellClass(guess.NativeCountriesMatch)">
+                            @string.Join(", ", guess.GuessedLanguage.NativeCountries)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
+
+<script>
+    htmx.onLoad(function(content) {
+        const input = document.getElementById('guessInput');
+        if (input && !input.hasAttribute('data-initialized')) {
+            input.focus();
+            initAutocomplete();
+            input.setAttribute('data-initialized', 'true');
+        }
+    });
+</script>
+
+<script>
+    htmx.onLoad(function(content) {
+        htmx.config.includeIndicatorStyles = false;
+        document.body.addEventListener('htmx:configRequest', function(evt) {
+            let token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
+            if (token) {
+                evt.detail.headers['RequestVerificationToken'] = token;
+            }
+        });
+    });
+</script>
+
+<script>
+    function shareResults() {
+        try {
+            const dailyNumber = '@DateTime.Today.ToString("yyMMdd")';
+
+            let emojiRows = '';
+            @foreach (var guess in Model.PreviousGuesses.AsEnumerable().Reverse())
+            {
+                    <text>
+                    emojiRows += [
+                        getEmoji(@(guess.NameMatch ? 2 : 0)),
+                        getEmoji(@(guess.FamilyMatch ? 2 : 0)),
+                        getEmoji(@((int)guess.WritingSystemsMatch)),
+                        getEmoji(@((int)guess.SpeakersComparison.Match)),
+                        getEmoji(@((int)guess.NativeCountriesMatch))
+                    ].join('') + '\n';
+                    </text>
+            }
+
+            const shareText = `LinguaGuess ${dailyNumber}\n` + `${@Model.PreviousGuesses.Count} guesses\n\n${emojiRows.trim()}`;
+
+            copyToClipboard(shareText);
+        } catch (error) {
+            console.error("Sharing failed:", error);
+            showToast("Failed to share results", false);
+        }
+        return false;
+    }
+
+    function getEmoji(matchValue) {
+        return matchValue === 2 ? '🟩' : matchValue === 1 ? '🟨' : '🟥';
+    }
+
+    async function copyToClipboard(text) {
+        try {
+            await navigator.clipboard.writeText(text);
+            showToast("Results copied to clipboard!", true);
+        } catch (err) {
+            showToast("Clipboard copy failed:", false);
+        }
+    }
+
+    function showToast(message, isSuccess) {
+        const toastEl = document.getElementById('shareToast');
+        if (!toastEl) return;
+
+        toastEl.querySelector('.toast-body').textContent = message;
+        toastEl.style.display = 'block';
+        toastEl.classList.toggle('bg-success', isSuccess);
+        toastEl.classList.toggle('bg-danger', !isSuccess);
+
+        setTimeout(() => {
+            toastEl.style.display = 'none';
+        }, 3000);
+    }
+</script>
