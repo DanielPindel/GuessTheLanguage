@@ -158,15 +158,15 @@
             let emojiRows = '';
             @foreach (var guess in Model.PreviousGuesses.AsEnumerable().Reverse())
             {
-                    <text>
-                    emojiRows += [
-                        getEmoji(@(guess.NameMatch ? 2 : 0)),
-                        getEmoji(@(guess.FamilyMatch ? 2 : 0)),
-                        getEmoji(@((int)guess.WritingSystemsMatch)),
-                        getEmoji(@((int)guess.SpeakersComparison.Match)),
-                        getEmoji(@((int)guess.NativeCountriesMatch))
-                    ].join('') + '\n';
-                    </text>
+                <text>
+                emojiRows += [
+                    getEmoji(@(guess.NameMatch ? 2 : 0)),
+                    getEmoji(@(guess.FamilyMatch ? 2 : 0)),
+                    getEmoji(@((int)guess.WritingSystemsMatch)),
+                    getEmoji(@((int)guess.SpeakersComparison.Match)),
+                    getEmoji(@((int)guess.NativeCountriesMatch))
+                ].join('') + '\n';
+                </text>
             }
 
             const shareText = `LinguaGuess ${dailyNumber}\n` + `${@Model.PreviousGuesses.Count} guesses\n\n${emojiRows.trim()}`;

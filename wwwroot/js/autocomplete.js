@@ -1,93 +1,140 @@
-﻿function initAutocomplete()
+﻿document.addEventListener('DOMContentLoaded', () =>
+{
+    initAutocomplete();
+    document.body.addEventListener('htmx:afterSwap', (evt) =>
+    {
+        if (evt.detail.target.querySelector('#guessInput, #languageDropdown'))
+        {
+            initAutocomplete();
+        }
+    });
+});
+
+function initAutocomplete()
 {
     const input = document.getElementById('guessInput');
     const dropdown = document.getElementById('languageDropdown');
-    const hiddenInput = document.getElementById('selectedLanguageId');
-    const items = document.querySelectorAll('.autocomplete-item');
+    const form = document.getElementById('guessForm');
+    const hiddenIdInput = document.getElementById('selectedLanguageId');
 
-    if (!input || !dropdown) return;
-
-    input.addEventListener('input', function ()
+    if (!input || !dropdown || !form)
     {
-        const value = this.value.toLowerCase();
-        let hasMatches = false;
+        console.log('Autocomplete elements not found');
+        return;
+    }
 
-        items.forEach(item =>
+    input.value = '';
+    input.focus();
+    dropdown.style.display = 'none';
+    let highlightedIndex = -1;
+    let visibleItems = [];
+
+    input.addEventListener('input', updateDropdown);
+    input.addEventListener('focus', updateDropdown);
+    input.addEventListener('keydown', handleKeyDown);
+    dropdown.addEventListener('click', handleDropdownClick);
+    document.addEventListener('click', closeIfOutside);
+
+    function updateDropdown()
+    {
+        const searchTerm = input.value.toLowerCase();
+        visibleItems = [];
+        const exactStartMatches = [];
+        const otherMatches = [];
+
+        dropdown.querySelectorAll('.autocomplete-item').forEach((item, index) =>
         {
-            const text = item.getAttribute('data-value').toLowerCase();
-            if (text.includes(value))
+            const languageName = item.dataset.value.toLowerCase();
+            const matches = languageName.includes(searchTerm);
+
+            if (matches)
             {
+                if (languageName.startsWith(searchTerm))
+                {
+                    exactStartMatches.push(item);
+                } else
+                {
+                    otherMatches.push(item);
+                }
+
                 item.style.display = '';
-                hasMatches = true;
+                item.classList.remove('highlighted');
+
+                item.onmouseenter = () =>
+                {
+                    visibleItems.forEach(el => el.classList.remove('highlighted'));
+                    item.classList.add('highlighted');
+                    highlightedIndex = visibleItems.indexOf(item);
+                };
             } else
             {
                 item.style.display = 'none';
             }
         });
 
-        dropdown.style.display = hasMatches ? 'block' : 'none';
-    });
+        visibleItems = [...exactStartMatches, ...otherMatches];
+        visibleItems.forEach(item => item.parentNode.appendChild(item));
 
-    input.addEventListener('focus', function ()
+        dropdown.style.display = visibleItems.length ? 'block' : 'none';
+        highlightedIndex = -1;
+    }
+
+    function handleKeyDown(e)
     {
-        if (dropdown.querySelectorAll('.autocomplete-item:not([style*="display: none"])').length > 0)
-        {
-            dropdown.style.display = 'block';
-        }
-    });
+        const actions = {
+            ArrowDown: () => highlightItem(1),
+            ArrowUp: () => highlightItem(-1),
+            Enter: () =>
+            {
+                if (highlightedIndex >= 0) selectItem(visibleItems[highlightedIndex]);
+                else if (visibleItems.length) selectItem(visibleItems[0]);
+                else form.requestSubmit();
+            },
+            Escape: () => dropdown.style.display = 'none'
+        };
 
-    document.addEventListener('click', function (e)
+        if (actions[e.key])
+        {
+            e.preventDefault();
+            actions[e.key]();
+        }
+    }
+
+    function highlightItem(step)
+    {
+        if (!visibleItems.length) return;
+        highlightedIndex = (highlightedIndex + step + visibleItems.length) % visibleItems.length;
+
+        visibleItems.forEach((item, i) =>
+        {
+            item.classList.toggle('highlighted', i === highlightedIndex);
+            if (i === highlightedIndex) item.scrollIntoView({ block: 'nearest' });
+        });
+    }
+
+    function handleDropdownClick(e)
+    {
+        const item = e.target.closest('.autocomplete-item');
+        if (item)
+        {
+            e.preventDefault();
+            selectItem(item);
+        }
+    }
+
+    function closeIfOutside(e)
     {
         if (!input.contains(e.target) && !dropdown.contains(e.target))
         {
             dropdown.style.display = 'none';
         }
-    });
+    }
 
-    items.forEach(item =>
+    function selectItem(item)
     {
-        item.addEventListener('click', function ()
-        {
-            input.value = this.getAttribute('data-value');
-            hiddenInput.value = this.getAttribute('data-id');
-            dropdown.style.display = 'none';
-        });
-    });
-
-    input.addEventListener('keydown', function (e)
-    {
-        if (e.key === 'Enter' && dropdown.style.display === 'block')
-        {
-            e.preventDefault();
-            const visibleItems = dropdown.querySelectorAll('.autocomplete-item:not([style*="display: none"])');
-            if (visibleItems.length > 0)
-            {
-                visibleItems[0].click();
-            }
-        }
-    });
-
-    // Add form validation to ensure a language is selected
-    const form = document.getElementById('guessForm');
-    if (form)
-    {
-        form.addEventListener('submit', function (e)
-        {
-            if (!hiddenInput.value)
-            {
-                e.preventDefault();
-                alert('Please select a language from the dropdown');
-                input.focus();
-            }
-        });
+        input.value = item.dataset.value;
+        hiddenIdInput.value = item.dataset.id;
+        dropdown.style.display = 'none';
+        setTimeout(() => form.requestSubmit(), 50);
     }
 }
-
-// Initialize autocomplete when the page loads
-document.addEventListener('DOMContentLoaded', initAutocomplete);
-
-// Reinitialize autocomplete when HTMX loads new content
-document.addEventListener('htmx:afterSwap', function ()
-{
-    initAutocomplete();
-});

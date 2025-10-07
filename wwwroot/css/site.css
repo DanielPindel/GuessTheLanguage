@@ -51,10 +51,17 @@ body {
     cursor: pointer;
 }
 
-    .autocomplete-item:hover
+    .autocomplete-item:hover,
+    .autocomplete-item.highlighted
     {
         background-color: #f8f9fa;
     }
+
+.highlighted
+{
+    background-color: #007bff !important;
+    color: white;
+}
 
 .table-success
 {
