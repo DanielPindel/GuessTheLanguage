@@ -52,7 +52,8 @@ function initAutocomplete()
                 if (languageName.startsWith(searchTerm))
                 {
                     exactStartMatches.push(item);
-                } else
+                }
+                else
                 {
                     otherMatches.push(item);
                 }
@@ -132,7 +133,7 @@ function initAutocomplete()
 
     function selectItem(item)
     {
-        input.value = item.dataset.value;
+        input.value = item.dataset.value || item.dataset.display;
         hiddenIdInput.value = item.dataset.id;
         dropdown.style.display = 'none';
         setTimeout(() => form.requestSubmit(), 50);

@@ -29,39 +29,45 @@ body {
 .autocomplete-dropdown
 {
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
     z-index: 1000;
-    max-height: 300px;
+    width: 100%;
+    max-height: 200px;
     overflow-y: auto;
     background: white;
-    border: 1px solid #ccc;
-    border-top: none;
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: none;
 }
 
 .autocomplete-table
 {
     margin-bottom: 0;
+    font-size: 0.9rem;
 }
+
+    .autocomplete-table td
+    {
+        vertical-align: middle;
+        padding: 8px 12px;
+        border-top: none;
+    }
 
 .autocomplete-item
 {
     cursor: pointer;
 }
 
-    .autocomplete-item:hover,
     .autocomplete-item.highlighted
     {
-        background-color: #f8f9fa;
+        cursor: pointer;
+        background-color: cornflowerblue;
     }
 
-.highlighted
-{
-    background-color: #007bff !important;
-    color: white;
-}
+        .autocomplete-item.highlighted td
+        {
+            background-color: transparent;
+        }
 
 .table-success
 {
