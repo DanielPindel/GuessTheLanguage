@@ -3,7 +3,7 @@
 
 @if (Model.IsCorrectGuess || Model.GameCompleted)
 {
-    <div class="alert @(Model.GameCompleted && !Model.IsCorrectGuess ? "alert-warning" : "alert-success") text-center mb-4">
+    <div class="alert @(Model.GameCompleted && !Model.PreviousGuesses.Any(g => g.NameMatch == true) ? "alert-warning" : "alert-success") text-center mb-4">
         <h3>@(Model.GameCompleted && !Model.IsCorrectGuess ? "Game over! The language was:" : "You guessed correctly!")</h3>
         <div class="d-flex justify-content-center align-items-center">
             <div>
@@ -41,7 +41,7 @@
           hx-swap="morph:outerHTML"
           class="mb-4"
           id="guessForm">
-        <input type="hidden" id="selectedLanguageId" name="languageId" />
+        <input type="hidden" id="selectedLanguageId" name="selectedLanguageId" />
         <div class="autocomplete-container">
             <div class="input-group">
                 <input type="text"
@@ -60,7 +60,7 @@
                         {
                             <tr class="autocomplete-item" data-value="@language.Name" data-id="@language.Id">
                                 <td>@language.Name</td>
-                                <td class="text-muted">@language.Family</td>
+                                <td class="text-muted">@language.NativeCountries[0]</td>
                             </tr>
                         }
                     </tbody>
@@ -111,7 +111,7 @@
                             @string.Join(", ", guess.GuessedLanguage.WritingSystems)
                         </td>
                         <td class="@Model.GetCellClass(guess.SpeakersComparison.Match)">
-                            @guess.GuessedLanguage.Speakers.ToString("N0")
+                            @guess.GuessedLanguage.Speakers
                             @if (!string.IsNullOrEmpty(guess.SpeakersComparison.Direction))
                             {
                                 <span>@guess.SpeakersComparison.Direction</span>
@@ -128,9 +128,11 @@
 }
 
 <script>
-    htmx.onLoad(function(content) {
+    htmx.onLoad(function(content)
+    {
         const input = document.getElementById('guessInput');
-        if (input && !input.hasAttribute('data-initialized')) {
+        if (input && !input.hasAttribute('data-initialized'))
+        {
             input.focus();
             initAutocomplete();
             input.setAttribute('data-initialized', 'true');
@@ -139,11 +141,14 @@
 </script>
 
 <script>
-    htmx.onLoad(function(content) {
+    htmx.onLoad(function(content)
+    {
         htmx.config.includeIndicatorStyles = false;
-        document.body.addEventListener('htmx:configRequest', function(evt) {
+        document.body.addEventListener('htmx:configRequest', function(evt)
+        {
             let token = document.querySelector('input[name="__RequestVerificationToken"]')?.value;
-            if (token) {
+            if (token)
+            {
                 evt.detail.headers['RequestVerificationToken'] = token;
             }
         });
@@ -169,7 +174,7 @@
                 </text>
             }
 
-            const shareText = `LinguaGuess ${dailyNumber}\n` + `${@Model.PreviousGuesses.Count} guesses\n\n${emojiRows.trim()}`;
+            const shareText = `GuessTheLanguage ${dailyNumber}\n` + `@(Model.PreviousGuesses.Count) guesses\n\n${emojiRows.trim()}`;
 
             copyToClipboard(shareText);
         } catch (error) {
