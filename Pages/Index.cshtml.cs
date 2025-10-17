@@ -43,7 +43,7 @@ public class IndexModel : PageModel
             PreviousGuesses.Add(guess);
         }
     }
-    public IActionResult OnPostGuess(int selectedLanguageId)
+    public IActionResult OnPost([FromForm] int selectedLanguageId)
     {
         CurrentGame = _gameService.GetTodaysGame();
         Languages = _gameService.GetAllLanguages();
