@@ -4,7 +4,7 @@
 @if (Model.IsCorrectGuess || Model.GameCompleted)
 {
     <div class="alert @(Model.GameCompleted && !Model.PreviousGuesses.Any(g => g.NameMatch == true) ? "alert-warning" : "alert-success") text-center mb-4">
-        <h3>@(Model.GameCompleted && !Model.IsCorrectGuess ? "Game over! The language was:" : "You guessed correctly!")</h3>
+        <h3>You guessed correctly!</h3>
         <div class="d-flex justify-content-center align-items-center">
             <div>
                 <h4 style="text-align: left; padding-left: 20px">@Model.TargetLanguage.Name</h4>
