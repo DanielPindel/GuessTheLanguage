@@ -9,8 +9,8 @@ namespace GuessTheLanguage.Pages;
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
-    private readonly ILanguageGameService _gameService;
-    private const string SessionKey = "LanguageGameState";
+    protected readonly ILanguageGameService _gameService;
+    private const string SessionKey = "DailyGameState";
 
     public IndexModel(ILogger<IndexModel> logger, ILanguageGameService gameService)
     {
@@ -19,10 +19,10 @@ public class IndexModel : PageModel
     }
 
     public GameSession CurrentGame {  get; set; }
+    public Language TargetLanguage { get; set; }
     public string TargetSentence { get; set; }
     public List<Language> Languages { get; set; }
     public bool GameCompleted { get; set; }
-    public Language TargetLanguage { get; set; }
     public List<GuessResult> PreviousGuesses = new List<GuessResult>();
     public bool IsCorrectGuess { get; set; }
 
@@ -100,6 +100,44 @@ public class IndexModel : PageModel
 
         return Partial("_GamePartial", this);
     }
+    private void SaveGameState()
+    {
+        var state = new GameState
+        {
+            TargetLanguage = TargetLanguage,
+            Guesses = PreviousGuesses,
+            IsCorrectGuess = IsCorrectGuess,
+            //HasGivenUp = HasGivenUp,
+            LastPlayDate = DateTime.Today
+        };
+
+        HttpContext.Session.Set(SessionKey, state);
+    }
+    private void LoadGameState()
+    {
+        var state = HttpContext.Session.Get<GameState>(SessionKey);
+        var today = DateTime.Today;
+
+        if (state == null || state.LastPlayDate < today)
+        {
+            state = new GameState()
+            {
+                TargetLanguage = _gameService.GetTodaysGame().Language,
+                LastPlayDate = today
+            };
+        }
+
+        //if (state.HasGivenUp)
+        //{
+        //    state.IsCorrectGuess = true;
+        //}
+
+        TargetLanguage = state.TargetLanguage;
+        TargetSentence = state.TargetSentence;
+        PreviousGuesses = state.Guesses;
+        IsCorrectGuess = state.IsCorrectGuess;
+        //HasGivenUp = state.HasGivenUp;
+    }
     public string GetCellClass(bool match)
     {
         return match ? "bg-success text-white" : "bg-danger text-white";
@@ -113,4 +151,14 @@ public class IndexModel : PageModel
             _ => "bg-danger text-white"
         };
     }
+}
+
+public class GameState
+{
+    public Language TargetLanguage { get; set; }
+    public string TargetSentence { get; set; }
+    public List<GuessResult> Guesses { get; set; } = new();
+    public bool IsCorrectGuess { get; set; }
+    //public bool HasGivenUp { get; set; }
+    public DateTime LastPlayDate { get; set; }
 }

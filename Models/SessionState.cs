@@ -1,6 +1,6 @@
 ﻿namespace GuessTheLanguage.Models;
 
-public class GameState
+public class SessionState
 {
     public int CurrentGameSessionId { get; set; }
     public int GuessCount { get; set; }
