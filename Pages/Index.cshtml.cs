@@ -1,8 +1,10 @@
 using GuessTheLanguage.Models;
 using GuessTheLanguage.Services;
+using GuessTheLanguage.Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Text.Json;
 
 namespace GuessTheLanguage.Pages;
 
@@ -105,7 +107,8 @@ public class IndexModel : PageModel
         var state = new GameState
         {
             TargetLanguage = TargetLanguage,
-            Guesses = PreviousGuesses,
+            TargetSentence = TargetSentence,
+            Guesses = PreviousGuesses ?? new List<GuessResult>(),
             IsCorrectGuess = IsCorrectGuess,
             //HasGivenUp = HasGivenUp,
             LastPlayDate = DateTime.Today
