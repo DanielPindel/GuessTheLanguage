@@ -30,38 +30,46 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
+        LoadGameState();
+
         CurrentGame = _gameService.GetTodaysGame();
         TargetSentence = CurrentGame.TargetSentence;
         Languages = _gameService.GetAllLanguages();
-        GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id);
         TargetLanguage = CurrentGame.Language;
 
-        var PreviousGuesses = _gameService.GetGuesses(CurrentGame.Id);
+        if (PreviousGuesses.Count == 0)
+        {
+            var serviceGuesses = _gameService.GetGuesses(CurrentGame.Id);
+            foreach (var guess in serviceGuesses)
+            {
+                var result = _gameService.CompareGuess(guess.LanguageId, CurrentGame.LanguageId);
+                result.GuessNumber = guess.GuessNumber;
+                result.GameCompleted = false;
+                PreviousGuesses.Add(result);
+            }
+        }
+
+        GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id) || PreviousGuesses.Count >= 6 || IsCorrectGuess;
+
         foreach (var guess in PreviousGuesses)
         {
-            var result = _gameService.CompareGuess(guess.LanguageId, CurrentGame.LanguageId);
-            result.GuessNumber = guess.GuessNumber;
-            result.GameCompleted = GameCompleted;
-            PreviousGuesses.Add(guess);
+            guess.GameCompleted = GameCompleted;
         }
+
+        SaveGameState();
     }
     public IActionResult OnPost([FromForm] int selectedLanguageId)
     {
+        LoadGameState();
+
         CurrentGame = _gameService.GetTodaysGame();
         Languages = _gameService.GetAllLanguages();
-        GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id);
-        TargetLanguage = CurrentGame.Language;
-        TargetSentence = CurrentGame.TargetSentence;
-        PreviousGuesses = _gameService.GetGuesses(CurrentGame.Id)
-            .Select(g =>
-            {
-                var result = _gameService.CompareGuess(g.LanguageId, CurrentGame.LanguageId);
-                result.GuessNumber = g.GuessNumber;
-                return result;
-            }).ToList();
 
-        if (IsCorrectGuess || GameCompleted)
+        GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id) || PreviousGuesses.Count >= 6 || IsCorrectGuess;
+
+        if (GameCompleted)
         {
+            SaveGameState();
             return Partial("_GamePartial", this);
         }
 
@@ -73,21 +81,28 @@ public class IndexModel : PageModel
                 try
                 {
                     var result = _gameService.CompareGuess(selectedLanguageId, CurrentGame.LanguageId);
+                    result.GuessNumber = PreviousGuesses.Count + 1;
+                    result.GameCompleted = false;
+
+                    PreviousGuesses.Add(result);
+
                     _gameService.RecordGuess(CurrentGame.Id, selectedLanguageId);
 
-                    PreviousGuesses = _gameService.GetGuesses(CurrentGame.Id)
-                        .Select(g =>
-                        {
-                            var r = _gameService.CompareGuess(g.LanguageId, CurrentGame.LanguageId);
-                            r.GuessNumber = g.GuessNumber;
-                            return r;
-                        }).ToList();
+                    IsCorrectGuess = result.NameMatch;
 
-                    GameCompleted = _gameService.IsGameCompleted(CurrentGame.Id);
+                    GameCompleted = IsCorrectGuess || PreviousGuesses.Count >= 6;
+
+                    foreach (var guess in PreviousGuesses)
+                    {
+                        guess.GameCompleted = GameCompleted;
+                    }
+
+                    SaveGameState();
                 }
                 catch (ArgumentNullException ex)
                 {
-                    ModelState.AddModelError("", $"Error processing guess: {ex.Message}");
+                    _logger.LogError(ex, "Error processing guess");
+                    ModelState.AddModelError("", "Error processing your guess. Please try again.");
                 }
             }
             else
@@ -104,42 +119,58 @@ public class IndexModel : PageModel
     }
     private void SaveGameState()
     {
-        var state = new GameState
+        try
         {
-            TargetLanguage = TargetLanguage,
-            TargetSentence = TargetSentence,
-            Guesses = PreviousGuesses ?? new List<GuessResult>(),
-            IsCorrectGuess = IsCorrectGuess,
-            //HasGivenUp = HasGivenUp,
-            LastPlayDate = DateTime.Today
-        };
+            var state = new GameState
+            {
+                TargetLanguage = TargetLanguage,
+                TargetSentence = TargetSentence,
+                Guesses = PreviousGuesses ?? new List<GuessResult>(),
+                IsCorrectGuess = IsCorrectGuess,
+                LastPlayDate = DateTime.Today
+            };
 
-        HttpContext.Session.Set(SessionKey, state);
+            HttpContext.Session.Set(SessionKey, state);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error saving game state");
+        }
     }
     private void LoadGameState()
     {
-        var state = HttpContext.Session.Get<GameState>(SessionKey);
-        var today = DateTime.Today;
-
-        if (state == null || state.LastPlayDate < today)
+        try
         {
-            state = new GameState()
+            var state = HttpContext.Session.Get<GameState>(SessionKey);
+            var today = DateTime.Today;
+
+            if (state == null || state.LastPlayDate < today)
             {
-                TargetLanguage = _gameService.GetTodaysGame().Language,
-                LastPlayDate = today
-            };
+                ResetGameState();
+                return;
+            }
+
+            TargetLanguage = state.TargetLanguage;
+            TargetSentence = state.TargetSentence;
+            PreviousGuesses = state.Guesses ?? new List<GuessResult>();
+            IsCorrectGuess = state.IsCorrectGuess;
         }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error loading game state");
+            ResetGameState();
+        }
+    }
+    private void ResetGameState()
+    {
+        CurrentGame = _gameService.GetTodaysGame();
+        TargetLanguage = CurrentGame.Language;
+        TargetSentence = CurrentGame.TargetSentence;
+        PreviousGuesses = new List<GuessResult>();
+        IsCorrectGuess = false;
+        GameCompleted = false;
 
-        //if (state.HasGivenUp)
-        //{
-        //    state.IsCorrectGuess = true;
-        //}
-
-        TargetLanguage = state.TargetLanguage;
-        TargetSentence = state.TargetSentence;
-        PreviousGuesses = state.Guesses;
-        IsCorrectGuess = state.IsCorrectGuess;
-        //HasGivenUp = state.HasGivenUp;
+        SaveGameState();
     }
     public string GetCellClass(bool match)
     {
