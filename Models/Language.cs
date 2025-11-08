@@ -7,6 +7,7 @@ public class Language
     public string Family { get; set; }
     public string[] WritingSystems { get; set; }
     public int Speakers { get; set; }
-    public string[] NativeCountries { get; set; }
+    public string[] Continents { get; set; }
+    public string[] Countries { get; set; }
     public string[] Sentences { get; set; }
 }

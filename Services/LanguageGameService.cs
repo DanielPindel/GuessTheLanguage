@@ -68,7 +68,8 @@ public class LanguageGameService: ILanguageGameService
             FamilyMatch = guess.Family == target.Family,
             WritingSystemsMatch = GetMatchResult(guess.WritingSystems, target.WritingSystems),
             SpeakersComparison = GetSpeakersMatch(guess, target),
-            NativeCountriesMatch = GetMatchResult(guess.NativeCountries, target.NativeCountries)
+            ContinentsMatch = GetMatchResult(guess.Continents, target.Continents),
+            CountriesMatch = GetMatchResult(guess.Countries, target.Countries)
         };
     }
     public List<Language> GetAllLanguages()

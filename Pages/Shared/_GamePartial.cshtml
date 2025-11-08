@@ -12,7 +12,8 @@
                     <div><strong>Family:</strong> @Model.TargetLanguage.Family</div>
                     <div><strong>Writing Systems:</strong> @string.Join(", ", Model.TargetLanguage.WritingSystems)</div>
                     <div><strong>Speakers:</strong> @Model.TargetLanguage.Speakers.ToString("N0")</div>
-                    <div><strong>Native Countries:</strong> @string.Join(", ", Model.TargetLanguage.NativeCountries)</div>
+                    <div><strong>Continents:</strong> @string.Join(", ", Model.TargetLanguage.Continents)</div>
+                    <div><strong>Countries:</strong> @string.Join(", ", Model.TargetLanguage.Countries)</div>
                 </div>
             </div>
         </div>
@@ -60,7 +61,7 @@
                         {
                             <tr class="autocomplete-item" data-value="@language.Name" data-id="@language.Id">
                                 <td>@language.Name</td>
-                                <td class="text-muted">@language.NativeCountries[0]</td>
+                                <td class="text-muted">@language.Countries[0]</td>
                             </tr>
                         }
                     </tbody>
@@ -94,6 +95,7 @@
                     <th>Family</th>
                     <th>Writing System</th>
                     <th>Speakers</th>
+                    <th>Continents</th>
                     <th>Native Countries</th>
                 </tr>
             </thead>
@@ -117,8 +119,11 @@
                                 <span>@guess.SpeakersComparison.Direction</span>
                             }
                         </td>
-                        <td class="@Model.GetCellClass(guess.NativeCountriesMatch)">
-                            @string.Join(", ", guess.GuessedLanguage.NativeCountries)
+                        <td class="@Model.GetCellClass(guess.ContinentsMatch)">
+                            @string.Join(", ", guess.GuessedLanguage.Continents)
+                        </td>
+                        <td class="@Model.GetCellClass(guess.CountriesMatch)">
+                            @string.Join(", ", guess.GuessedLanguage.Countries)
                         </td>
                     </tr>
                 }
@@ -169,7 +174,8 @@
                     getEmoji(@(guess.FamilyMatch ? 2 : 0)),
                     getEmoji(@((int)guess.WritingSystemsMatch)),
                     getEmoji(@((int)guess.SpeakersComparison.Match)),
-                    getEmoji(@((int)guess.NativeCountriesMatch))
+                    getEmoji(@((int)guess.ContinentsMatch)),
+                    getEmoji(@((int)guess.CountriesMatch))
                 ].join('') + '\n';
                 </text>
             }

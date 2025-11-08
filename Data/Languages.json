@@ -5,7 +5,8 @@
     "Family": "Germanic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 1457000000,
-    "NativeCountries": [ "United Kingdom", "United States", "Canada", "Australia", "Ireland", "New Zealand", "Liberia", "Guyana" ],
+    "Continents": [ "Europe", "North America", "Australia & Oceania" ],
+    "Countries": [ "United Kingdom", "United States", "Canada", "Australia", "Ireland", "New Zealand", "Liberia", "Guyana" ],
     "Sentences": [
       "How can I help you?",
       "It's a beautiful day!",
@@ -19,7 +20,8 @@
     "Family": "Italic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 498000000,
-    "NativeCountries": [ "Spain", "Mexico", "El Salvador", "Bolivia", "Colombia" ],
+    "Continents": [ "Europe", "South America" ],
+    "Countries": [ "Spain", "Mexico", "El Salvador", "Bolivia", "Colombia" ],
     "Sentences": [
       "Voy a tener que llegar un poco tarde a la reunión.",
       "El tráfico está especialmente pesado esta mañana.",
@@ -33,7 +35,8 @@
     "Family": "Koreanic",
     "WritingSystems": [ "Hangul", "Hanja" ],
     "Speakers": 81000000,
-    "NativeCountries": [ "South Korea", "North Korea" ],
+    "Continents": [ "Asia" ],
+    "Countries": [ "South Korea", "North Korea" ],
     "Sentences": [
       "여기서 가장 가까운 지하철역이 어디인가요?",
       "커피 한잔 하러 갈 시간 좀 낼 수 있어?",
@@ -47,7 +50,8 @@
     "Family": "Slavic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 43000000,
-    "NativeCountries": [ "Poland", "Lithuania" ],
+    "Continents": [ "Europe" ],
+    "Countries": [ "Poland", "Lithuania" ],
     "Sentences": [
       "Zapomniałam, gdzie położyłam klucze do domu.",
       "Według mnie ten kolor zupełnie do ciebie nie pasuje.",
@@ -61,11 +65,162 @@
     "Family": "Germanic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 95000000,
-    "NativeCountries": [ "Germany", "Switzerland", "Austria", "Liechtenstein", "Luxembourg", "Belgium" ],
+    "Continents": [ "Europe" ],
+    "Countries": [ "Germany", "Switzerland", "Austria", "Liechtenstein", "Luxembourg", "Belgium" ],
     "Sentences": [
       "Kannst du mir kurz mit den schweren Tüten helfen?",
       "Ich muss auf dem Weg nach Hause noch einkaufen gehen.",
       "Der Zug hat heute Morgen leider zehn Minuten Verspätung."
+    ]
+  },
+
+  {
+    "Id": 6,
+    "Name": "Russian",
+    "Family": "Indo-European",
+    "WritingSystems": [ "Cyrillic" ],
+    "Speakers": 190000,
+    "Continents": [ "Europe", "Asia" ],
+    "Countries": [ "Russia", "Belarus", "Kazakhstan", "Kyrgyzstan", "Tajikistan" ],
+    "Sentences": [
+      "Давай встретимся у фонтана в парке.",
+      "Её новое платье было очень элегантным.",
+      "Я как раз собирался позвонить тебе."
+    ]
+  },
+
+  {
+    "Id": 7,
+    "Name": "Persian",
+    "Family": "Indo-European",
+    "WritingSystems": [ "Persian", "Cyrillic" ],
+    "Speakers": 91000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Iran", "Afghanistan", "Tajikistan", "Iraq", "Uzbekistan" ],
+    "Sentences": [
+      "تو راه خونه نون بخرم یادم نره.",
+      "هوای امروز برای پیاده‌روی واقعاً مساعده.",
+      "دارم دیرم میشه، یه کم عجله کن."
+    ]
+  },
+
+  {
+    "Id": 8,
+    "Name": "Albanian",
+    "Family": "Indo-European",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 7500000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Albania", "Kosovo", "North Macedonia", "Montenegro" ],
+    "Sentences": [
+      "Më duhet të blej një kuti të re qumështi.",
+      "Nuk e kam parë remotën e televizorit kudo.",
+      "Ky restorant shërben pjatat më të shijshme të qytetit."
+    ]
+  },
+
+  {
+    "Id": 9,
+    "Name": "Arabic",
+    "Family": "Afro-Asiatic",
+    "WritingSystems": [ "Arabic" ],
+    "Speakers": 411000000,
+    "Continents": [ "Asia", "Africa" ],
+    "Countries": [ "Algeria", "Egypt", "Jordan", "Saudi Arabia", "United Arab Emirates" ],
+    "Sentences": [
+      "سأغلق هاتفي حتى أركز في المذاكرة.",
+      "الفيلم لم يكن بمستوى التوقعات على الإطلاق.",
+      "لدى جارنا حديقة صغيرة مليئة بالورود."
+    ]
+  },
+
+  {
+    "Id": 10,
+    "Name": "Catalan",
+    "Family": "Indo-European",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 4100000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Andorra", "Spain", "France", "Italy" ],
+    "Sentences": [
+      "M'he deixat les ulleres a dins de la calaixera.",
+      "La novel·la es va fer famosa per les seves descripcions vívides.",
+      "M'estava preparant per sortir quan vas trucar."
+    ]
+  },
+
+  {
+    "Id": 11,
+    "Name": "Portugese",
+    "Family": "Indo-European",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 250000000,
+    "Continents": [ "Europe", "South America", "Africa" ],
+    "Countries": [ "Portugal", "Brazil", "Angola", "Mozambique", "Guinea-Bissau" ],
+    "Sentences": [
+      "Será que me podes ajudar a levar estas compras para o carro?",
+      "Vamos ter de esperar que a chuva pare para sair de casa.",
+      "Este bolo de laranja está com um aspeto delicioso."
+    ]
+  },
+
+  {
+    "Id": 12,
+    "Name": "Armenian",
+    "Family": "Indo-European",
+    "WritingSystems": [ "Armenian" ],
+    "Speakers": 5300000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Armenia" ],
+    "Sentences": [
+      "Մի քիչ սպասիր, մինչև լույս կանաչի:",
+      "Նրա նոր կտավը լի է կյանքի և գույնի:",
+      "Այս փողոցը ամենագեղեցիկն է ամբողջ թաղամասում:"
+    ]
+  },
+
+  {
+    "Id": 13,
+    "Name": "Azerbaijani",
+    "Family": "Turkic",
+    "WritingSystems": [ "Latin", "Perso-Arabic", "Cyrillic" ],
+    "Speakers": 24000000,
+    "Continents": [ "Europe", "Asia" ],
+    "Countries": [ "Azerbaijan" ],
+    "Sentences": [
+      "Körpü tikintisi üçün əsas yol bağlanıb.",
+      "Qapını bağlayanda kilidləndiyindən əmin ol.",
+      "Bu qədim bina şəhərin ən maraqlı tikililərindən biridir."
+    ]
+  },
+
+  {
+    "Id": 14,
+    "Name": "Bengali",
+    "Family": "Indo-European",
+    "WritingSystems": [ "Bengali-Assamese" ],
+    "Speakers": 242000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Bangladesh", "India" ],
+    "Sentences": [
+      "আজকে সকালে ট্রাফিক একটু কমই ছিল।",
+      "ওই রেস্টুরেন্টে গিয়ে দেখা যাক বিকেল বেলা।",
+      "আজকে রাতের আকাশটা বেশ পরিষ্কার দেখা যাচ্ছে।"
+    ]
+  },
+
+  {
+    "Id": 15,
+    "Name": "Belarusian",
+    "Family": "Indo-European",
+    "WritingSystems": [ "Cyrillic", "Latin" ],
+    "Speakers": 5094000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Belarus" ],
+    "Sentences": [
+      "Гэты аўтобус рэдка прыходзіць па раскладзе.",
+      "Калі ласка, пакліч усіх да стала праз хвіліну.",
+      "Калі б я ведаў, я б табе напісаў."
     ]
   }
 ]
