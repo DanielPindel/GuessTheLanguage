@@ -5,7 +5,7 @@
     "Family": "Germanic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 1457000000,
-    "Continents": [ "Europe", "North America", "Australia & Oceania" ],
+    "Continents": [ "Europe", "North America", "South America", "Africa", "Australia & Oceania", "Asia" ],
     "Countries": [ "United Kingdom", "United States", "Canada", "Australia", "Ireland", "New Zealand", "Liberia", "Guyana" ],
     "Sentences": [
       "How can I help you?",
@@ -47,7 +47,7 @@
   {
     "Id": 4,
     "Name": "Polish",
-    "Family": "Slavic",
+    "Family": "Balto-Slavic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 43000000,
     "Continents": [ "Europe" ],
@@ -77,7 +77,7 @@
   {
     "Id": 6,
     "Name": "Russian",
-    "Family": "Indo-European",
+    "Family": "Balto-Slavic",
     "WritingSystems": [ "Cyrillic" ],
     "Speakers": 190000,
     "Continents": [ "Europe", "Asia" ],
@@ -92,7 +92,7 @@
   {
     "Id": 7,
     "Name": "Persian",
-    "Family": "Indo-European",
+    "Family": "Indo-Iranian",
     "WritingSystems": [ "Persian", "Cyrillic" ],
     "Speakers": 91000000,
     "Continents": [ "Asia" ],
@@ -107,7 +107,7 @@
   {
     "Id": 8,
     "Name": "Albanian",
-    "Family": "Indo-European",
+    "Family": "Albanic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 7500000,
     "Continents": [ "Europe" ],
@@ -122,7 +122,7 @@
   {
     "Id": 9,
     "Name": "Arabic",
-    "Family": "Afro-Asiatic",
+    "Family": "Semitic",
     "WritingSystems": [ "Arabic" ],
     "Speakers": 411000000,
     "Continents": [ "Asia", "Africa" ],
@@ -137,7 +137,7 @@
   {
     "Id": 10,
     "Name": "Catalan",
-    "Family": "Indo-European",
+    "Family": "Italic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 4100000,
     "Continents": [ "Europe" ],
@@ -151,8 +151,8 @@
 
   {
     "Id": 11,
-    "Name": "Portugese",
-    "Family": "Indo-European",
+    "Name": "Portuguese",
+    "Family": "Italic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 250000000,
     "Continents": [ "Europe", "South America", "Africa" ],
@@ -167,7 +167,7 @@
   {
     "Id": 12,
     "Name": "Armenian",
-    "Family": "Indo-European",
+    "Family": "Armenian",
     "WritingSystems": [ "Armenian" ],
     "Speakers": 5300000,
     "Continents": [ "Europe" ],
@@ -197,7 +197,7 @@
   {
     "Id": 14,
     "Name": "Bengali",
-    "Family": "Indo-European",
+    "Family": "Indo-Iranian",
     "WritingSystems": [ "Bengali-Assamese" ],
     "Speakers": 242000000,
     "Continents": [ "Asia" ],
@@ -212,7 +212,7 @@
   {
     "Id": 15,
     "Name": "Belarusian",
-    "Family": "Indo-European",
+    "Family": "Balto-Slavic",
     "WritingSystems": [ "Cyrillic", "Latin" ],
     "Speakers": 5094000,
     "Continents": [ "Europe" ],
@@ -221,6 +221,81 @@
       "Гэты аўтобус рэдка прыходзіць па раскладзе.",
       "Калі ласка, пакліч усіх да стала праз хвіліну.",
       "Калі б я ведаў, я б табе напісаў."
+    ]
+  },
+
+  {
+    "Id": 16,
+    "Name": "Dutch",
+    "Family": "Germanic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 25000000,
+    "Continents": [ "Europe", "South America" ],
+    "Countries": [ "Netherlands", "Belgium", "Suriname" ],
+    "Sentences": [
+      "Ik moet nog even snel de planten water geven.",
+      "De afstandsbediening ligt waarschijnlijk op de bank.",
+      "Zou je de deur op slot kunnen doen als je weggaat?"
+    ]
+  },
+
+  {
+    "Id": 17,
+    "Name": "French",
+    "Family": "Italic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 74000000,
+    "Continents": [ "Europe", "Africa", "North America", "South America", "Australia & Oceania" ],
+    "Countries": [ "France", "Canada", "Democratic Republic of the Congo" ],
+    "Sentences": [
+      "La réunion a été reportée à la semaine prochaine.",
+      "Le parfum de ce pain frais est irrésistible.",
+      "La vue depuis leur nouvel appartement est tout simplement époustouflante."
+    ]
+  },
+
+  {
+    "Id": 18,
+    "Name": "Dzongkha",
+    "Family": "Tibeto-Burman",
+    "WritingSystems": [ "Tibetan" ],
+    "Speakers": 171000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Bhutan" ],
+    "Sentences": [
+      "༎ ང་གིས་དེ་རིང་ཁྲིམས་འཛིན་འཐུ་འཁོན་ཞུ་དགོས།",
+      "༎ ཁྱེད་རང་གིས་སྒོ་འདི་སྒྲིག་འཛུགས་གནང་རོགས།",
+      "༎ བོད་ཀྱི་རི་བོ་འདི་མཐོ་ཚད་ཅན་ཞིག་རེད།"
+    ]
+  },
+
+  {
+    "Id": 19,
+    "Name": "Bosnian",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Latin", "Cyrillic" ],
+    "Speakers": 2700000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Bosnia and Herzegovina", "Montenegro" ],
+    "Sentences": [
+      "Možeš li mi dodati onu knjigu sa police, molim te?",
+      "Zaboravio sam gdje sam parkirao auto jučer.",
+      "Ovaj film me podsjeća na naš put Italijom."
+    ]
+  },
+
+  {
+    "Id": 20,
+    "Name": "Malay",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin", "Arabic" ],
+    "Speakers": 82000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Malaysia", "Brunei", "Singapore" ],
+    "Sentences": [
+      "Awak ada nampak di mana saya letak kunci kereta?",
+      "Filem itu tidak semeriah yang diiklankan.",
+      "Pemandangan dari bukit itu amat mempersonakan."
     ]
   }
 ]
