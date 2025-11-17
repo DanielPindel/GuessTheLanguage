@@ -4,7 +4,7 @@
     "Name": "English",
     "Family": "Germanic",
     "WritingSystems": [ "Latin" ],
-    "Speakers": 1457000000,
+    "Speakers": 380000000,
     "Continents": [ "Europe", "North America", "South America", "Africa", "Australia & Oceania", "Asia" ],
     "Countries": [ "United Kingdom", "United States", "Canada", "Australia", "Ireland", "New Zealand", "Liberia", "Guyana" ],
     "Sentences": [
@@ -19,7 +19,7 @@
     "Name": "Spanish",
     "Family": "Italic",
     "WritingSystems": [ "Latin" ],
-    "Speakers": 498000000,
+    "Speakers": 519000000,
     "Continents": [ "Europe", "South America" ],
     "Countries": [ "Spain", "Mexico", "El Salvador", "Bolivia", "Colombia" ],
     "Sentences": [
@@ -49,7 +49,7 @@
     "Name": "Polish",
     "Family": "Balto-Slavic",
     "WritingSystems": [ "Latin" ],
-    "Speakers": 43000000,
+    "Speakers": 40000000,
     "Continents": [ "Europe" ],
     "Countries": [ "Poland", "Lithuania" ],
     "Sentences": [
@@ -79,7 +79,7 @@
     "Name": "Russian",
     "Family": "Balto-Slavic",
     "WritingSystems": [ "Cyrillic" ],
-    "Speakers": 190000,
+    "Speakers": 145000000,
     "Continents": [ "Europe", "Asia" ],
     "Countries": [ "Russia", "Belarus", "Kazakhstan", "Kyrgyzstan", "Tajikistan" ],
     "Sentences": [
@@ -296,6 +296,171 @@
       "Awak ada nampak di mana saya letak kunci kereta?",
       "Filem itu tidak semeriah yang diiklankan.",
       "Pemandangan dari bukit itu amat mempersonakan."
+    ]
+  },
+
+  {
+    "Id": 21,
+    "Name": "Bulgarian",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Cyrillic", "Latin" ],
+    "Speakers": 7600000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Bulgaria" ],
+    "Sentences": [
+      "Забравих да си купя билета за концерта онлайн.",
+      "Трябва да си сменя паролата, забравих я отново.",
+      "Мисля, че решението му беше малко прибързано."
+    ]
+  },
+
+  {
+    "Id": 22,
+    "Name": "Mooré",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 12000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Burkina Faso" ],
+    "Sentences": [
+      "F bɩɩɩs tɩ f tall n maan a taab-n-vɩkã.",
+      "F pa tɩɩs tɩ f wa n kõ a taaba-rãmba neerã.",
+      "A kũunù sẽn da yaa kiigd a yiibã."
+    ]
+  },
+
+  {
+    "Id": 23,
+    "Name": "Kirundi",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 13000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Burundi" ],
+    "Sentences": [
+      "Nshaka ko unyiza ico gitabo cari hejuru y'itebe.",
+      "Iki giti kiri hanze kinini cyane.",
+      "Ngiye gufunga umuryango mbe ngo nisohoka."
+    ]
+  },
+
+  {
+    "Id": 24,
+    "Name": "Khmer",
+    "Family": "Austroasiatic",
+    "WritingSystems": [ "Khmer" ],
+    "Speakers": 19000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Cambodia" ],
+    "Sentences": [
+      "ខ្ញុំត្រូវទិញប្រេងរំអិលមុនហាងបិទ។",
+      "ថ្ងៃនេះឡានក្រុងមកយឺតជាងធម្មតា។",
+      "សំលៀកបំពាក់ថ្មីរបស់នាងគួរឲ្យចាប់អារម្មណ៍ណាស់។"
+    ]
+  },
+
+  {
+    "Id": 25,
+    "Name": "Sango",
+    "Family": "Creole",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 620000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Central African Republic" ],
+    "Sentences": [
+      "Fadësô, mû mbênî kêtê kopo ngû tî nzö.",
+      "Mbï yeke wara pörö tî kûâ bongö na lâ.",
+      "Na ngoi tî bîanî, mbï yeke sâra kua na yâ tî ndo."
+    ]
+  },
+
+  {
+    "Id": 26,
+    "Name": "Mandarin",
+    "Family": "Chinese",
+    "WritingSystems": [ "Chinese" ],
+    "Speakers": 990000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "China", "Taiwan" ],
+    "Sentences": [
+      "你能帮我把阳台上的花浇一下吗？",
+      "我好像把充电器落在朋友的车上。",
+      "我们得在超市关门前赶到。"
+    ]
+  },
+
+  {
+    "Id": 27,
+    "Name": "Comorian",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Arabic", "Latin" ],
+    "Speakers": 800000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Comoros" ],
+    "Sentences": [
+      "Na hita lipapasa lihadisi haritsi i dukani.",
+      "Umesahau wapi ufunguo wa gari?",
+      "Chakula cha hoteli hini kinatosha sana."
+    ]
+  },
+
+  {
+    "Id": 28,
+    "Name": "Māori",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 186000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "New Zealand" ],
+    "Sentences": [
+      "Me haere au ki te tiki rongoā i te whare hoki.",
+      "He kaha te tukunga o te rangi inanahi.",
+      "Mehemea i mōhio ahau, kua tae atu ahau i te wā tika."
+    ]
+  },
+
+  {
+    "Id": 29,
+    "Name": "Croatian",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 5100000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Croatia", "Bosnia and Herzegovina", "Montenegro" ],
+    "Sentences": [
+      "Hoćeš li ići na tržnicu prije podneva?",
+      "Jesi li vidjela moju novu knjigu o povijesti?",
+      "Stara je ulica izgledala prekrasno u mjesečini."
+    ]
+  },
+
+  {
+    "Id": 30,
+    "Name": "Greek",
+    "Family": "Hellenic",
+    "WritingSystems": [ "Greek" ],
+    "Speakers": 13500000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Greece", "Cyprus" ],
+    "Sentences": [
+      "Θα πάω να αγοράσω ψωμί πριν κλείσει το φούρνο.",
+      "Μην ξεχάσεις να κλείσεις το παράθυρο της κουζίνας.",
+      "Η γεύση αυτού του κρασιού είναι πιο γλυκιά απ' όσο νόμιζα."
+    ]
+  },
+
+  {
+    "Id": 31,
+    "Name": "Turkish",
+    "Family": "Turkic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 99000000,
+    "Continents": [ "Europe", "Asia" ],
+    "Countries": [ "Turkey", "Cyprus" ],
+    "Sentences": [
+      "Marketten eve dönerken ekmek almayı unutmuşum.",
+      "Çantanın içindeki kırmızı defteri bana uzatır mısın?",
+      "Yeni aldığım çiçekleri balkona yerleştirmem lazım."
     ]
   }
 ]
