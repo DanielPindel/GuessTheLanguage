@@ -462,5 +462,155 @@
       "Çantanın içindeki kırmızı defteri bana uzatır mısın?",
       "Yeni aldığım çiçekleri balkona yerleştirmem lazım."
     ]
+  },
+
+  {
+    "Id": 32,
+    "Name": "Czech",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 9600000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Czech Republic" ],
+    "Sentences": [
+      "Mohl bys mi podat tu knihu z horní police?",
+      "Nezapomeň vypnout světlo v koupelně.",
+      "Potřebuju vyměnit žárovku v obývacím pokoji."
+    ]
+  },
+
+  {
+    "Id": 33,
+    "Name": "Danish",
+    "Family": "Germanic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 6000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Denmark" ],
+    "Sentences": [
+      "Husk lige at slukke for strygejernet før du går.",
+      "Vi bliver nødt til at vande blomsterne på altanen.",
+      "Duften af friskbrød er altid så uimodståelig."
+    ]
+  },
+
+  {
+    "Id": 34,
+    "Name": "Tetum",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 500000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Timor-Leste" ],
+    "Sentences": [
+      "Hau lakon ha'u-nia xave kareta iha dalan husi merkadu.",
+      "Funan sira iha jardin hirus loos wainhira loro monu.",
+      "Hau hakerek karta wainhira nia mai to'o iha uma."
+    ]
+  },
+
+  {
+    "Id": 35,
+    "Name": "Tigrinya",
+    "Family": "Semitic",
+    "WritingSystems": [ "Ge'ez" ],
+    "Speakers": 9900000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Eritrea", "Ethiopia" ],
+    "Sentences": [
+      "እታ ኣብ ገጠር ዝነበረት እግሪ እግሪ ገዛ ኣዝያ ጽቡቕ እያ።",
+      "እዚ ኣብ ሳምንታ ዝረኸብክዎ ሓድሽ መጽሓፍ ኣዝዩ መሳጢ እዩ።",
+      "ነዛ ኣብ ከባቢ መስኮት ዘላ ሻምብቆ ክትህበኒ ትኽእል ዲኻ?"
+    ]
+  },
+
+  {
+    "Id": 36,
+    "Name": "Estonian",
+    "Family": "Finnic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 1200000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Estonia" ],
+    "Sentences": [
+      "Pean poest veel leiba ja piima järele minema.",
+      "Tänane buss jõudis peatusesse harjumuspärasest varem.",
+      "Kas sa oled mu uut kella kuskil näinud?"
+    ]
+  },
+
+  {
+    "Id": 37,
+    "Name": "Swazi",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 2300000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "South Africa", "Eswatini" ],
+    "Sentences": [
+      "Bantfwana basadlala emaphoyiseni etikolo.",
+      "Ngifanele ngiyothenga ufulawa ngaphambi kokuba ivalwe isitolo.",
+      "Leli bhulukwe lisha libukeka lihle kakhulu."
+    ]
+  },
+
+  {
+    "Id": 38,
+    "Name": "Afar",
+    "Family": "Cushitic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 2600000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Ethiopia" ],
+    "Sentences": [
+      "Yi-gitaaba sayyó caliyyak maabinnaa?",
+      "Baxa qiddigil gacisak maabinnaa?",
+      "Yi-bar xalay yi-giti buxah anuk yamlike."
+    ]
+  },
+
+  {
+    "Id": 39,
+    "Name": "Amharic",
+    "Family": "Semitic",
+    "WritingSystems": [ "Ge'ez" ],
+    "Speakers": 35000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Ethiopia" ],
+    "Sentences": [
+      "ዛሬ ማርኬት ከመዝጋት በፊት እንጥብጣቢ መግዛት አለብኝ።",
+      "ከቤት ከመውጣትዎ በፊት መስኮቱን ያዝዙ።",
+      "ዛሬ ያገኘሁት አዲስ መፅሃፍ በጣም አስደሳች ነው።"
+    ]
+  },
+
+  {
+    "Id": 40,
+    "Name": "Oromo",
+    "Family": "Cushitic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 45500000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Ethiopia" ],
+    "Sentences": [
+      "Buna dhiqannuu kessa dhiqatu dhabe, mana dhiqannaa deemuu qaba.",
+      "Konsoolan kun guyyaa har'aa sirriitti hin hojjattu.",
+      "Mana barnootaa haaraa kanaa fiigaan guddaa qaba."
+    ]
+  },
+
+  {
+    "Id": 41,
+    "Name": "Somali",
+    "Family": "Cushitic",
+    "WritingSystems": [ "Latin", "Wadaad", "Osmanya" ],
+    "Speakers": 24000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Somalia", "Djibouti", "Ethiopia" ],
+    "Sentences": [
+      "Buuggan cusub ayaa ka xiiso badan kan hore.",
+      "بوقًَن وا كَن أگُ فِعَن ێ إنان أخصِیێ.",
+      "𐒎𐒖𐒐𐒖𐒁𐒆𐒖 𐒋𐒓𐒋𐒓𐒁 𐒓𐒓 𐒓𐒖𐒖𐒒𐒖𐒞𐒈𐒖𐒞 �𐒕𐒖𐒔𐒖𐒕."
+    ]
   }
 ]
