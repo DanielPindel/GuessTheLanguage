@@ -527,7 +527,7 @@
   {
     "Id": 36,
     "Name": "Estonian",
-    "Family": "Finnic",
+    "Family": "Uralic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 1200000,
     "Continents": [ "Europe" ],
@@ -611,6 +611,141 @@
       "Buuggan cusub ayaa ka xiiso badan kan hore.",
       "بوقًَن وا كَن أگُ فِعَن ێ إنان أخصِیێ.",
       "𐒎𐒖𐒐𐒖𐒁𐒆𐒖 𐒋𐒓𐒋𐒓𐒁 𐒓𐒓 𐒓𐒖𐒖𐒒𐒖𐒞𐒈𐒖𐒞 �𐒕𐒖𐒔𐒖𐒕."
+    ]
+  },
+
+  {
+    "Id": 42,
+    "Name": "Fijian",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 340000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Fiji" ],
+    "Sentences": [
+      "Yadra, o cei na yacamu?",
+      "Au sa lako ki na makete ena mataka.",
+      "Me'u kana sobu me'u la'ki cakacaka."
+    ]
+  },
+
+  {
+    "Id": 43,
+    "Name": "Fiji Hindi",
+    "Family": "Indo-Iranian",
+    "WritingSystems": [ "Devanagari", "Latin", "Kaithi", "Perso-Arabic" ],
+    "Speakers": 380000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Fiji" ],
+    "Sentences": [
+      "प्रणाम, तोहार नाव का ह?",
+      "Kirpaya, tu hamaar madad kar sakela?",
+      "बाथरूम कहाँ बा?"
+    ]
+  },
+
+  {
+    "Id": 44,
+    "Name": "Finnish",
+    "Family": "Uralic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 5000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Finland" ],
+    "Sentences": [
+      "Käyn usein uimassa järvessä.",
+      "Luen hyvää kirjaa sohvalla.",
+      "Autan ystävääni huomenna."
+    ]
+  },
+
+  {
+    "Id": 45,
+    "Name": "Swedish",
+    "Family": "Germanic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 10000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Sweden", "Finland" ],
+    "Sentences": [
+      "Jag åker ofta till jobbet med bussen.",
+      "Vi tittar på en film ikväll.",
+      "Jag ska handla mat efter jobbet."
+    ]
+  },
+
+  {
+    "Id": 46,
+    "Name": "Georgian",
+    "Family": "Kartvelian",
+    "WritingSystems": [ "Georgian" ],
+    "Speakers": 3760000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Georgia" ],
+    "Sentences": [
+      "ამ წიგნის კითხვა მინდა.",
+      "ის კარგად უკრავს გიტარაზე.",
+      "დაგვიანებით დავბრუნდები სახლში."
+    ]
+  },
+
+  {
+    "Id": 47,
+    "Name": "Haitian Creole",
+    "Family": "Creole",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 13000000,
+    "Continents": [ "North America" ],
+    "Countries": [ "Haiti" ],
+    "Sentences": [
+      "Mwen pral fè manje maten an.",
+      "Nou bezwen achte pen ak lèt demen.",
+      "Kafe a twò cho pou mwen bwè li."
+    ]
+  },
+
+  {
+    "Id": 48,
+    "Name": "Hungarian",
+    "Family": "Uralic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 14000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Hungary" ],
+    "Sentences": [
+      "Ezt a könyvet holnap fogom befejezni.",
+      "A ceruza az asztal alatt van.",
+      "A régi film nagyon szomorú volt."
+    ]
+  },
+
+  {
+    "Id": 49,
+    "Name": "Icelanding",
+    "Family": "Germanic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 390000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Iceland" ],
+    "Sentences": [
+      "Ég er að borða morgunmatinn minn.",
+      "Strákarnir spila fótbolta úti í dag.",
+      "Gamla húsið er mjög fallegt."
+    ]
+  },
+
+  {
+    "Id": 50,
+    "Name": "Hindi",
+    "Family": "Indo-Iranian",
+    "WritingSystems": [ "Devanagari" ],
+    "Speakers": 345000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "India", "Fiji" ],
+    "Sentences": [
+      "मैं अपना होमवर्क ख़त्म कर रहा हूँ।",
+      "वह पार्क में अपने दोस्त का इंतज़ार कर रही है।",
+      "हमें बाज़ार से सब्ज़ियाँ लानी हैं।"
     ]
   }
 ]
