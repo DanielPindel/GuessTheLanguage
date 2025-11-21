@@ -721,7 +721,7 @@
 
   {
     "Id": 49,
-    "Name": "Icelanding",
+    "Name": "Icelandic",
     "Family": "Germanic",
     "WritingSystems": [ "Latin" ],
     "Speakers": 390000,
@@ -746,6 +746,156 @@
       "मैं अपना होमवर्क ख़त्म कर रहा हूँ।",
       "वह पार्क में अपने दोस्त का इंतज़ार कर रही है।",
       "हमें बाज़ार से सब्ज़ियाँ लानी हैं।"
+    ]
+  },
+
+  {
+    "Id": 51,
+    "Name": "Indonesian",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 80000000,
+    "Continents": [ "Asia", "Australia & Oceania" ],
+    "Countries": [ "Indonesia" ],
+    "Sentences": [
+      "Saya sedang menyelesaikan pekerjaan rumah saya.",
+      "Dia menunggu temannya di halte bus.",
+      "Kopi ini terlalu panas untuk diminum."
+    ]
+  },
+
+  {
+    "Id": 52,
+    "Name": "Kurdish",
+    "Family": "Indo-Iranian",
+    "WritingSystems": [ "Latin", "Perso-Arabic" ],
+    "Speakers": 29000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Iraq" ],
+    "Sentences": [
+      "Birayê min yê piçûk hinekî nexweş dibîne.",
+      "ئەو چاوەڕێی هاوڕێکەی لە ئێستگەی باس لەکەت.",
+      "دەتوانیت ئەوە دووبارە بکەیتەوە کە وتیت?"
+    ]
+  },
+
+  {
+    "Id": 53,
+    "Name": "Irish",
+    "Family": "Celtic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 200000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Ireland" ],
+    "Sentences": [
+      "Tá an ghrian ag soilsiú go geal inniu.",
+      "Bhí an stoirm an-ghéar aréir.",
+      "Tá an fharraige an-chiúin sa tráthnóna."
+    ]
+  },
+
+  {
+    "Id": 54,
+    "Name": "Hebrew",
+    "Family": "Semitic",
+    "WritingSystems": [ "Hebrew" ],
+    "Speakers": 6600000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Israel" ],
+    "Sentences": [
+      "הרוח נושבת חזק מאוד בחוץ.",
+      "הדלת של המרפסת לא נסגרת.",
+      "התמונה הזאת תלויה הפוך על הקיר."
+    ]
+  },
+
+  {
+    "Id": 55,
+    "Name": "Italian",
+    "Family": "Italic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 65000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Italy", "San Marino", "Vatican City", "Switzerland" ],
+    "Sentences": [
+      "C'è un bel profumo di fiori in giardino.",
+      "La luna stasera è piena e luminosa.",
+      "Mio nonno sa suonare la fisarmonica."
+    ]
+  },
+
+  {
+    "Id": 56,
+    "Name": "Japanese",
+    "Family": "Japonic",
+    "WritingSystems": [ "Kanji", "Hiragana", "Katakana" ],
+    "Speakers": 123000000,
+    "Continents": [ "Asia", "Australia & Oceania" ],
+    "Countries": [ "Japan", "Palau" ],
+    "Sentences": [
+      "あの山は本当に美しいですね。",
+      "雨がとても強く降っています。",
+      "リモコンはテーブルの上にあります。"
+    ]
+  },
+
+  {
+    "Id": 57,
+    "Name": "Kazakh",
+    "Family": "Turkic",
+    "WritingSystems": [ "Cyrillic", "Latin", "Arabic" ],
+    "Speakers": 16000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Kazakhstan" ],
+    "Sentences": [
+      "Бүгін hawa өте суық.",
+      "Бұл есіктің кілті жоғалды.",
+      "Оның телефонының батареясы бітті."
+    ]
+  },
+
+  {
+    "Id": 58,
+    "Name": "Swahili",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin", "Arabic", "Mandombe" ],
+    "Speakers": 5300000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Tanzania", "Rwanda", "Kenya", "Uganda" ],
+    "Sentences": [
+      "Kuna upepo mwingi sana jioni hii.",
+      "Baba yangu anajua kuandika mashairi.",
+      "Sikumbuki jina la mtu huyo."
+    ]
+  },
+
+  {
+    "Id": 59,
+    "Name": "Gilbertese",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 120000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Kiribati" ],
+    "Sentences": [
+      "I-nonou ánei te boki n te teeboora.",
+      "E raorao te tai n te Rawa.",
+      "To na nakoira n te m'áneane."
+    ]
+  },
+
+  {
+    "Id": 60,
+    "Name": "Serbian",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Cyrillic", "Latin" ],
+    "Speakers": 12000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Serbia", "Kosovo", "Bosnia and Herzegovina", "Montenegro" ],
+    "Sentences": [
+      "Сунце обасјава целу долину.",
+      "Reka teče veoma brzo danas.",
+      "Овај сат не ради већ месец дана."
     ]
   }
 ]
