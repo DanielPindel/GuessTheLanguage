@@ -897,5 +897,155 @@
       "Reka teče veoma brzo danas.",
       "Овај сат не ради већ месец дана."
     ]
+  },
+
+  {
+    "Id": 61,
+    "Name": "Kyrgyz",
+    "Family": "Turkic",
+    "WritingSystems": [ "Cyrillic", "Perso-Arabic" ],
+    "Speakers": 5150000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Kyrgyzstan" ],
+    "Sentences": [
+      "Бүгүн күн ашыкча ысык.",
+      "كىتەپ ستولدۇن ۉستۉندۅ جاتات.",
+      "Мен сиздин атыңызды унуттум."
+    ]
+  },
+
+  {
+    "Id": 62,
+    "Name": "Lao",
+    "Family": "Kra-Dai",
+    "WritingSystems": [ "Lao", "Thai" ],
+    "Speakers": 3700000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Laos" ],
+    "Sentences": [
+      "ດອກໄມ້ ໃນ ສວນ ກຳລັງ ບານ.",
+      "ໃສ່ ປື້ມ ໄວ້ ເທິງ ຊັ້ນ ຫນັງສື ແບບນີ້.",
+      "ຂ້ອຍ ຈື່ ບໍ່ ໄດ້ ວ່າ ໄວ້ ທີ່ໃດ."
+    ]
+  },
+
+  {
+    "Id": 63,
+    "Name": "Latvian",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 1500000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Latvia" ],
+    "Sentences": [
+      "Vakar vējš bija ārkārtīgi stiprs.",
+      "Es aizmirsu viņa uzvārdu.",
+      "Rīt mēs dosimies pastaigā pēc darba."
+    ]
+  },
+
+  {
+    "Id": 64,
+    "Name": "Sotho",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 5600000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Lesotho", "South Africa", "Zimbabwe" ],
+    "Sentences": [
+      "Pula e na haholo kajeno.",
+      "Na u tseba ho bapala katleho?",
+      "Ba ile hae kamorao ho mosebetsi."
+    ]
+  },
+
+  {
+    "Id": 65,
+    "Name": "Lithuanian",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 4000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Lithuania" ],
+    "Sentences": [
+      "Šis laikrodis sustojo prieš dvi valandas.",
+      "Raktas įkrito už spintos.",
+      "Aš pamiršau, kur pastatėme mašiną."
+    ]
+  },
+
+  {
+    "Id": 66,
+    "Name": "Luxembourgish",
+    "Family": "Germanic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 400000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Luxembourg" ],
+    "Sentences": [
+      "Mir ginn haut Owend e bësse mat Frënn eraus.",
+      "Ech hunn nach ëmmer net d'Neiegkeete gelies.",
+      "Hiren Optrag huet e gudden Androck hannerlooss."
+    ]
+  },
+
+  {
+    "Id": 67,
+    "Name": "Cantonese",
+    "Family": "Chinese",
+    "WritingSystems": [ "Cantonese" ],
+    "Speakers": 80000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Hong Kong", "Macau" ],
+    "Sentences": [
+      "今日個天好藍，一片雲都冇。",
+      "落緊雨，你記得帶遮呀。",
+      "你可唔可以幫我搬呢張枱？"
+    ]
+  },
+
+  {
+    "Id": 68,
+    "Name": "Malagasy",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 25000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Madagascar" ],
+    "Sentences": [
+      "Tena mahafinaritra ny feon'ity mpihira ity.",
+      "Fantatrao ve ny lalana mankany an-tanàn-dehibe?",
+      "Mbola tsy novakiko ny taratasy."
+    ]
+  },
+
+  {
+    "Id": 69,
+    "Name": "Dhivehi",
+    "Family": "Indo-Iranian",
+    "WritingSystems": [ "Thaana" ],
+    "Speakers": 400000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Maldives" ],
+    "Sentences": [
+      "މިއަދު ރީތި ވަރުގަދައެވެ.",
+      "މި ފޯނަށް ބެޓެރީ ނެތެވެ.",
+      "މި ލެފަތަށް ކިތައް ހިފާލަށް ލިޔެލާށެވެ."
+    ]
+  },
+
+  {
+    "Id": 70,
+    "Name": "Bambara",
+    "Family": "Mande",
+    "WritingSystems": [ "Latin", "Arabic" ],
+    "Speakers": 4200000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Mali" ],
+    "Sentences": [
+      "I ka gafe in dɔ n ka tabali kan.",
+      "An bɛ taa sugu la sini.",
+      "Dumuni in ka di kosɛbɛ."
+    ]
   }
 ]
