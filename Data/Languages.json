@@ -1047,5 +1047,155 @@
       "An bɛ taa sugu la sini.",
       "Dumuni in ka di kosɛbɛ."
     ]
+  },
+
+  {
+    "Id": 71,
+    "Name": "Quechua",
+    "Family": "Quechua",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 7200000,
+    "Continents": [ "South America" ],
+    "Countries": [ "Bolivia", "Chile", "Argentina", "Ecuador", "Peru" ],
+    "Sentences": [
+      "Q'asamuyku qucha pataman.",
+      "Chay runakunaqa karumanta hamurqaku.",
+      "Wasiq llawinta ch'usaqman chinkachirqani."
+    ]
+  },
+
+  {
+    "Id": 72,
+    "Name": "Aymara",
+    "Family": "Aymaran",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 1700000,
+    "Continents": [ "South America" ],
+    "Countries": [ "Bolivia", "Peru" ],
+    "Sentences": [
+      "Ch'iyar qhunqhu manq'apan utjawayi.",
+      "Jichhürux ofisina nayrar sarañawa.",
+      "Kawkins utjarux kuna sutini?"
+    ]
+  },
+
+  {
+    "Id": 73,
+    "Name": "Soninke",
+    "Family": "Mande",
+    "WritingSystems": [ "Latin", "Arabic" ],
+    "Speakers": 2300000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Mali", "Senegal", "Ivory Coast" ],
+    "Sentences": [
+      "I be di wo kome.",
+      "Mununku bii tabali kan.",
+      "Soo daxama wo yon."
+    ]
+  },
+
+  {
+    "Id": 74,
+    "Name": "Fula",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin", "Adlam", "Arabic" ],
+    "Speakers": 37000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Mali", "Burkina Faso" ],
+    "Sentences": [
+      "Miɗo ƴaabaa ko o nanii ka hoore teebul.",
+      "Miɗo tawaa ko miɗo sokli defte keso.",
+      "Ngesa o ɗon mari no feere haa hannde."
+    ]
+  },
+
+  {
+    "Id": 75,
+    "Name": "Maltese",
+    "Family": "Semitic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 570000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Malta" ],
+    "Sentences": [
+      "Jien qed naqra ktieb ġdid hafna interessanti.",
+      "Il-ħut fil-frixa kien delizjuż u frisku.",
+      "Dik id-dar il-qadima għandha erba' btieti kbar."
+    ]
+  },
+
+  {
+    "Id": 76,
+    "Name": "Marshallese",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 55000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Marshall Islands" ],
+    "Sentences": [
+      "Ij jilkin kōnono ippān doon eo.",
+      "Kwōmaroñ in kōnono ippān kijōt kaṇe?",
+      "Lalin eo ejjinen wōt āinin jota."
+    ]
+  },
+
+  {
+    "Id": 77,
+    "Name": "Romanian",
+    "Family": "Italic",
+    "WritingSystems": [ "Latin", "Cyrillic" ],
+    "Speakers": 22000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Romania", "Moldova" ],
+    "Sentences": [
+      "Ea își pregătește cafeaua dimineața înainte de lucru.",
+      "Copiii noștri se joacă în curte cu vecinii lor.",
+      "Poți să-mi spui te rog unde este cea mai apropiată farmacie?"
+    ]
+  },
+
+  {
+    "Id": 78,
+    "Name": "Mongolian",
+    "Family": "Mongolic",
+    "WritingSystems": [ "Mongolian", "Cyrillic" ],
+    "Speakers": 5000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Mongolia" ],
+    "Sentences": [
+      "ᠨᠠᠷᠠ ᠤᠨ ᠬᠤᠷᠠᠭ ᠲᠠᠢ ᠨᠣᠮ ᠤᠨ ᠳ᠋ᠤ ᠤᠨᠢᠴᠠᠭᠠᠯᠠᠭ ᠳᠠᠭᠤᠨᠠ",
+      "ᠨᠠᠷᠠ ᠤᠨ ᠬᠤᠷᠠᠭ ᠲᠠᠢ ᠨᠣᠷᠠᠭ ᠲᠠᠢ ᠨᠣᠮ ᠤᠨ ᠳ᠋ᠤ ᠤᠨᠢᠴᠠᠭᠠᠯᠠᠭ ᠳᠠᠭᠤᠨᠠ",
+      "Чи маргааш ах дүүтэйгээ хаана явах гэж байна?"
+    ]
+  },
+
+  {
+    "Id": 79,
+    "Name": "Montenegrin",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Latin", "Cyrillic" ],
+    "Speakers": 215000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Montenegro" ],
+    "Sentences": [
+      "Uvijek pijem jednu šolju crne kafe ujutro.",
+      "Моја сестра тренира одбојку три пута седмично.",
+      "Naš stari stan ima predivan pogled na more."
+    ]
+  },
+
+  {
+    "Id": 80,
+    "Name": "Burmese",
+    "Family": "Tibeto-Burman",
+    "WritingSystems": [ "Mon-Burmese" ],
+    "Speakers": 33000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Myanmar" ],
+    "Sentences": [
+      "သူတို့ ညနေ ခုတင် ပေါ်မှာ ဘေစင်ကို ကြည့်နေကြတယ်။",
+      "စာအုပ်ကို စားပွဲရဲ့ ထိပ်ဆုံးမှာ ထားလိုက်ပါ။",
+      "မနက်ဖြန် ဘယ်အချိန် မှာ မန်နေဂျာ ရောက်မှာလဲ။"
+    ]
   }
 ]
