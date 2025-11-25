@@ -1197,5 +1197,155 @@
       "စာအုပ်ကို စားပွဲရဲ့ ထိပ်ဆုံးမှာ ထားလိုက်ပါ။",
       "မနက်ဖြန် ဘယ်အချိန် မှာ မန်နေဂျာ ရောက်မှာလဲ။"
     ]
+  },
+
+  {
+    "Id": 81,
+    "Name": "Nauruan",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 10000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Nauru" ],
+    "Sentences": [
+      "Ebow it ebok me ekarigarig ianena it ebok me atsinen.",
+      "Nganga it eden an itsibwen it ebok me ekarigarig.",
+      "Iko eden an eabwebwe it ebok me ekarigarig."
+    ]
+  },
+
+  {
+    "Id": 82,
+    "Name": "Nepali",
+    "Family": "Indo-Iranian",
+    "WritingSystems": [ "Devanagari" ],
+    "Speakers": 19000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Nepal" ],
+    "Sentences": [
+      "हामी बिहानैदेखि खेलिरहेका छौं।",
+      "उनीहरूको विवाह अर्को महिनामा हुनेछ।",
+      "उसले मलाई नयाँ पुस्तक दिनेछ भनेर वाचा गरेको थियो।"
+    ]
+  },
+
+  {
+    "Id": 83,
+    "Name": "Hausa",
+    "Family": "Chadic",
+    "WritingSystems": [ "Latin", "Arabic" ],
+    "Speakers": 58000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Niger" ],
+    "Sentences": [
+      "Yanzu suna zaune a ƙasan wannan babban bishiya.",
+      "Duk ranar Litinin muna tafiya zuwa makaranta da mota.",
+      "Gobe za mu kalli fina-finai a gidan wasan kwaikwayo."
+    ]
+  },
+
+  {
+    "Id": 84,
+    "Name": "Macedonian",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Cyrillic" ],
+    "Speakers": 2000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "North Macedonia" ],
+    "Sentences": [
+      "Малата птичка ја гради својата гнездо на дрвото.",
+      "Тие отидоа на пазар да купат свежо овошје и зеленчук.",
+      "Стариот човек седна на клупата и запали лула."
+    ]
+  },
+
+  {
+    "Id": 85,
+    "Name": "Norwegian",
+    "Family": "Germanic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 4320000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Norway" ],
+    "Sentences": [
+      "Den røde bilen kjørte fort forbi det gamle huset.",
+      "Hun synger alltid i dusjen om morgenen.",
+      "Etter stormen fant vi flere ødelagte grener i hagen."
+    ]
+  },
+
+  {
+    "Id": 86,
+    "Name": "Sami",
+    "Family": "Uralic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 30000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Norway", "Sweden", "Finland" ],
+    "Sentences": [
+      "Skuvla lea giddejuvvon skábmamánu rádjái.",
+      "Dán guovllu eai orru nu ollu olbmot.",
+      "Muhtin oaivvi duohta historjjá eai dieđe."
+    ]
+  },
+
+  {
+    "Id": 87,
+    "Name": "Urdu",
+    "Family": "Indo-Iranian",
+    "WritingSystems": [ "Perso-Arabic" ],
+    "Speakers": 81000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Pakistan" ],
+    "Sentences": [
+      "پرندے صبح سویرے اٹھ کر چہچہانے لگتے ہیں۔",
+      "اس نے ایک لمبی سانس بھری اور مسکراتے ہوئے جواب دیا۔",
+      "رات گئے تک ہلکی بارش کا سلسلہ جاری رہا۔"
+    ]
+  },
+
+  {
+    "Id": 88,
+    "Name": "Palauan",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 17000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Palau" ],
+    "Sentences": [
+      "Ak milsich er a klukuk el mo er a stoang.",
+      "A sensei a omdasu er a tekoi er a skuul.",
+      "Aika a chelsel a chuchel a ngelekel a rechad."
+    ]
+  },
+
+  {
+    "Id": 89,
+    "Name": "Tok Pisin",
+    "Family": "Creole",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 130000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Papua New Guinea" ],
+    "Sentences": [
+      "Dispela man i wok long planim kaukau long bus.",
+      "Ol i wok long wokim nupela haus sik long maunten.",
+      "Em i bin lukim wanpela purpur long nait."
+    ]
+  },
+
+  {
+    "Id": 90,
+    "Name": "Guarani",
+    "Family": "Tupian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 6500000,
+    "Continents": [ "South America" ],
+    "Countries": [ "Paraguay", "Bolivia" ],
+    "Sentences": [
+      "Ahecha peteĩ guyra pytũ óga yvate rehe.",
+      "Ro'u juky ha kamby ko'ẽ̀ramo.",
+      "Peteĩ mbarakaja ipya'e okañy ka'aguy porãme."
+    ]
   }
 ]
