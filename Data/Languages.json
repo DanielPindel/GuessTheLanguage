@@ -1347,5 +1347,170 @@
       "Ro'u juky ha kamby ko'ẽ̀ramo.",
       "Peteĩ mbarakaja ipya'e okañy ka'aguy porãme."
     ]
+  },
+
+  {
+    "Id": 91,
+    "Name": "Filipino",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 29000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Philippines" ],
+    "Sentences": [
+      "Ang maliwanag na buwan ay nagniningning sa madilim na langit.",
+      "Inalagaan niya ang mga sugat ng ibon hanggang sa ito'y gumaling.",
+      "Ang makabagong teknolohiya ay mabilis na nagbabago."
+    ]
+  },
+
+  {
+    "Id": 92,
+    "Name": "Kinyarwanda",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 15000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Rwanda" ],
+    "Sentences": [
+      "Abana barimo kwiga indimi ebyiri mu ishuri.",
+      "Umuyaga mwinshi wavuye mu burengerazuba uravuna ibiti.",
+      "Ibitaro bishya biri mu karere kazamuka cyane."
+    ]
+  },
+
+  {
+    "Id": 93,
+    "Name": "Samoan",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 430000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Samoa", "American Samoa" ],
+    "Sentences": [
+      "O le a matou folau atu i le atumotu i le va'a folau.",
+      "Na matou sopoia le vaitafe i se alalaupapa tuai.",
+      "Sa ou va'ai i se manulele lanu moana i luga o le la'au."
+    ]
+  },
+
+  {
+    "Id": 94,
+    "Name": "Tamil",
+    "Family": "Dravidian",
+    "WritingSystems": [ "Tamil", "Arabic", "Latin" ],
+    "Speakers": 79000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Singapore", "Sri Lanka", "India" ],
+    "Sentences": [
+      "என் தாய் சமையலறையில் சுவையான உணவை தயார் செய்கிறார்.",
+      "அவள் அவசரமாக வீட்டிற்குள் நுழைந்தாள்.",
+      "இந்தப் பாட்டு என்னை என் சிறுவயதுக்கு கொண்டு செல்கிறது."
+    ]
+  },
+
+  {
+    "Id": 95,
+    "Name": "Slovak",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 5000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Slovakia" ],
+    "Sentences": [
+      "Cestovali sme vlakom cez vysoké hory.",
+      "Jej obľúbené jedlo je bryndzové halušky.",
+      "Včera večer sme pozorovali krásny západ slnka."
+    ]
+  },
+
+  {
+    "Id": 96,
+    "Name": "Slovene",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 2500000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Slovenia" ],
+    "Sentences": [
+      "V nedeljo zjutraj je trg vedno poln ljudi.",
+      "Njen stareši so ji kupili novo kolo za rojstni dan.",
+      "Stara gospa redno obiskuje sosedo, ki živi sama."
+    ]
+  },
+
+  {
+    "Id": 97,
+    "Name": "Zulu",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 12000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "South Africa" ],
+    "Sentences": [
+      "Umfana udlala ibhola nogogo ngesonto.",
+      "Umalume uthenge imoto entsha ngodlame.",
+      "Izinyoni eziningi zihlala esihlahleni esikhulu emgwaqeni."
+    ]
+  },
+
+  {
+    "Id": 98,
+    "Name": "Xhosa",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 8000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "South Africa", "Zimbabwe" ],
+    "Sentences": [
+      "Inewadi zami zikwisakhivo sam ezintsha.",
+      "Umalume uzonikeza imoto yakhe endala kumnakwethu.",
+      "Abantwana bayacula ingoma entsha esikolweni namhlanje."
+    ]
+  },
+
+  {
+    "Id": 99,
+    "Name": "Afrikaans",
+    "Family": "Germanic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 7200000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "South Africa" ],
+    "Sentences": [
+      "Ons gaan môre vir 'n lang ritt in die berge ry.",
+      "Die pad was so stoffig dat ons die motor moes was.",
+      "Die ou man het sy koffie stadig gedrink en na die reën gekyk."
+    ]
+  },
+
+  {
+    "Id": 100,
+    "Name": "Northern Sotho",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 6200000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "South Africa" ],
+    "Sentences": [
+      "Monna o berekisa diperekisi tša gagwe kua marakeng.",
+      "Puku ye e ngwadilwe ke mongwadi yo mohumi kudu.",
+      "Dinku tša gabo di ja byose kua masimong."
+    ]
+  },
+
+  {
+    "Id": 101,
+    "Name": "Tswana",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 5000000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Botswana", "South Africa", "Zimbabwe" ],
+    "Sentences": [
+      "Kgele e tsamaya ka bonako kwa ntle ga motse.",
+      "Pula e ne ya na ka maatla a magolo a letsatsi le le fetileng.",
+      "Kgele e tsamaya ka bonako go feta phoofolo tse dingwe."
+    ]
   }
 ]
