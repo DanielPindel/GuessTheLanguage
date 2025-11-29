@@ -1512,5 +1512,140 @@
       "Pula e ne ya na ka maatla a magolo a letsatsi le le fetileng.",
       "Kgele e tsamaya ka bonako go feta phoofolo tse dingwe."
     ]
+  },
+
+  {
+    "Id": 102,
+    "Name": "Sinhala",
+    "Family": "Indo-Iranian",
+    "WritingSystems": [ "Sinhala" ],
+    "Speakers": 16000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Sri Lanka" ],
+    "Sentences": [
+      "ළමයින් පාසැලට යාමට සූදානම් වෙනවා.",
+      "ඔහු ගෙදර ඉදලා නව පොතක් කියවනවා.",
+      "මම උදේ නාවන විට සෑම දිනකම ගීත ගායනා කරනවා."
+    ]
+  },
+
+  {
+    "Id": 103,
+    "Name": "Romansh",
+    "Family": "Italic",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 40000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Switzerland" ],
+    "Sentences": [
+      "Nus lein ir a spass sin la muntogna suenter mezdi.",
+      "Ils utschels van en l'auta en il ciel clar.",
+      "La via nova maina tras in uaul vegl e silenzius."
+    ]
+  },
+
+  {
+    "Id": 104,
+    "Name": "Tajik",
+    "Family": "Indo-Iranian",
+    "WritingSystems": [ "Cyrillic" ],
+    "Speakers": 10500000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Tajikistan" ],
+    "Sentences": [
+      "Мо дар китобхона дар бораи таърих мехонем.",
+      "Олимон натиҷаи тадқиқоти худро эълон карданд.",
+      "Вай дар бог гулҳои зебо мешиносад."
+    ]
+  },
+
+  {
+    "Id": 105,
+    "Name": "Thai",
+    "Family": "Kra-Dai",
+    "WritingSystems": [ "Thai" ],
+    "Speakers": 27000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Thailand" ],
+    "Sentences": [
+      "แม่ค้าขายผลไม้สดใหม่ในตลาดนัด",
+      "เราจะไปเที่ยวทะเลกันในวันหยุดสุดสัปดาห์นี้",
+      "ศิลปินวาดภาพทิวทัศน์เมืองเก่าที่สวยงาม"
+    ]
+  },
+
+  {
+    "Id": 106,
+    "Name": "Tongan",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 187000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Tonga" ],
+    "Sentences": [
+      "ʻOku lānga ʻa e laʻā ʻi he ʻati moʻunga.",
+      "Ko e kau ʻotuá ni ʻoku nau nofo ʻi he matāfoli ʻo e vao.",
+      "Naʻe foki ʻa e fefine ki ʻapi ʻo ʻoatu ʻa e tohi."
+    ]
+  },
+
+  {
+    "Id": 107,
+    "Name": "Turkmen",
+    "Family": "Turkic",
+    "WritingSystems": [ "Latin", "Perso-Arabic", "Cyrillic" ],
+    "Speakers": 6800000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Turkmenistan" ],
+    "Sentences": [
+      "Çagalar mekdep öýünden soň meýdançada oýnaýarlar.",
+      "Güýzüň howasy ýyly we ýelişli boldy.",
+      "Ol öýüniň öňündäki bağda gül ektirdi."
+    ]
+  },
+
+  {
+    "Id": 108,
+    "Name": "Tuvaluan",
+    "Family": "Malayo-Polynesian",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 13000,
+    "Continents": [ "Australia & Oceania" ],
+    "Countries": [ "Tuvalu" ],
+    "Sentences": [
+      "Koutou e fano ki fea i te aho Sā?",
+      "Toku tamana e galue i te fale tusi a te malo.",
+      "E manino te moana i te aso nei, ka seai‵se‵matagi."
+    ]
+  },
+
+  {
+    "Id": 109,
+    "Name": "Ukrainian",
+    "Family": "Balto-Slavic",
+    "WritingSystems": [ "Cyrillic" ],
+    "Speakers": 32000000,
+    "Continents": [ "Europe" ],
+    "Countries": [ "Ukraine" ],
+    "Sentences": [
+      "Вона завжди слухає класичну музику, коли працює.",
+      "Мій дід саджав яблуні в саду ще дуже давно.",
+      "Ми з сестрою готуємо сюрприз для мами на свято."
+    ]
+  },
+
+  {
+    "Id": 110,
+    "Name": "Uzbek",
+    "Family": "Turkic",
+    "WritingSystems": [ "Latin", "Cyrillic", "Perso-Arabic" ],
+    "Speakers": 34000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Uzbekistan" ],
+    "Sentences": [
+      "Ular chorshanba kuni yangi filnni ko‘rishga borishdi.",
+      "Кеча кечқурун ёмғир ёғиб, совиб қолди.",
+      "Mening do‘stim matematikadan yangi darslik sotib oldi."
+    ]
   }
 ]
