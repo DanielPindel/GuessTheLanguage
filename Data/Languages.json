@@ -1647,5 +1647,65 @@
       "Кеча кечқурун ёмғир ёғиб, совиб қолди.",
       "Mening do‘stim matematikadan yangi darslik sotib oldi."
     ]
+  },
+
+  {
+    "Id": 111,
+    "Name": "Bislama",
+    "Family": "Creole",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 10000,
+    "Continents": [ "Oceania" ],
+    "Countries": [ "Vanuatu" ],
+    "Sentences": [
+      "Fis ol i kasem long solwota i bigwan tumas.",
+      "Man oli karem ol box blong bia i go long stoa.",
+      "Kapten i talem stóri long ol bigfala tráek blong ol pást."
+    ]
+  },
+
+  {
+    "Id": 112,
+    "Name": "Vietnamese",
+    "Family": "Austroasiatic",
+    "WritingSystems": [ "Vietnamese" ],
+    "Speakers": 86000000,
+    "Continents": [ "Asia" ],
+    "Countries": [ "Vietnam" ],
+    "Sentences": [
+      "Anh ấy là một kiến trúc sư tài năng với nhiều ý tưởng đột phá.",
+      "Cô giáo mới của chúng tôi rất thân thiện và hài hước.",
+      "Anh ấy đang cố gắng sửa chiếc xe máy cũ của mình."
+    ]
+  },
+
+  {
+    "Id": 113,
+    "Name": "Shona",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 9600000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Zimbabwe" ],
+    "Sentences": [
+      "Shiri dzinorira zvinonakidza mumakwenzi edanda remuti remuonde.",
+      "Handina kumbofunga kuti taizosangana zvakare mushure memakore akawanda.",
+      "Tiri kugadzira nhandare yetsva yekutamba basketball."
+    ]
+  },
+
+  {
+    "Id": 114,
+    "Name": "Ndebele",
+    "Family": "Atlantic-Congo",
+    "WritingSystems": [ "Latin" ],
+    "Speakers": 2600000,
+    "Continents": [ "Africa" ],
+    "Countries": [ "Zimbabwe" ],
+    "Sentences": [
+      "Kufanele sigijime esikoleni ukuze singafiki emuva kwesikhathi.",
+      "Bafuna ukwakha indlu yabo entsha ngaphambi kokuza kwezulu.",
+      "Sizakubona abazali bethu ngempelasonto elizayo ekhaya."
+    ]
   }
 ]
