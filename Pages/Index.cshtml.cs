@@ -185,6 +185,10 @@ public class IndexModel : PageModel
             _ => "bg-danger text-white"
         };
     }
+    public string FormatSpeakers(int speakers)
+    {
+        return speakers.ToString("N0").Replace(",", " ");
+    }
 }
 
 public class GameState

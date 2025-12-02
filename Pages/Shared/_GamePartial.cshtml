@@ -113,7 +113,7 @@
                             @string.Join(", ", guess.GuessedLanguage.WritingSystems)
                         </td>
                         <td class="@Model.GetCellClass(guess.SpeakersComparison.Match)">
-                            @guess.GuessedLanguage.Speakers
+                            @Model.FormatSpeakers(guess.GuessedLanguage.Speakers)
                             @if (!string.IsNullOrEmpty(guess.SpeakersComparison.Direction))
                             {
                                 <span>@guess.SpeakersComparison.Direction</span>
