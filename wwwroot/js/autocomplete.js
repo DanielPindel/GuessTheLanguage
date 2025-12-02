@@ -37,7 +37,7 @@ function initAutocomplete()
 
     function updateDropdown()
     {
-        const searchTerm = input.value.toLowerCase();
+        const searchTerm = input.value.toLowerCase().trim();
         visibleItems = [];
         const exactStartMatches = [];
         const otherMatches = [];
@@ -45,7 +45,9 @@ function initAutocomplete()
         dropdown.querySelectorAll('.autocomplete-item').forEach((item, index) =>
         {
             const languageName = item.dataset.value.toLowerCase();
-            const matches = languageName.includes(searchTerm);
+            const searchData = item.dataset.search.toLowerCase();
+
+            const matches = searchData.includes(searchTerm);
 
             if (matches)
             {
@@ -67,7 +69,8 @@ function initAutocomplete()
                     item.classList.add('highlighted');
                     highlightedIndex = visibleItems.indexOf(item);
                 };
-            } else
+            }
+            else
             {
                 item.style.display = 'none';
             }

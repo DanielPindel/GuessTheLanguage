@@ -59,8 +59,12 @@
                     <tbody>
                         @foreach (var language in Model.Languages.OrderBy(l => l.Name))
                         {
-                            <tr class="autocomplete-item" data-value="@language.Name" data-id="@language.Id">
-                                <td>@language.Name</td>
+                            var countries = string.Join(", ", language.Countries ?? Array.Empty<string>());
+                            <tr class="autocomplete-item"
+                                data-value="@language.Name"
+                                data-search="@($"{language.Name}|{countries}")"
+                                data-id="@language.Id">
+                                <td><strong>@language.Name</strong></td>
                                 <td class="text-muted">@language.Countries[0]</td>
                             </tr>
                         }
