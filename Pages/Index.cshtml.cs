@@ -27,6 +27,7 @@ public class IndexModel : PageModel
     public bool GameCompleted { get; set; }
     public List<GuessResult> PreviousGuesses = new List<GuessResult>();
     public bool IsCorrectGuess { get; set; }
+    public bool HasGivenUp { get; set; }
 
     public void OnGet()
     {
@@ -172,6 +173,18 @@ public class IndexModel : PageModel
 
         SaveGameState();
     }
+    public IActionResult OnPostGiveUp()
+    {
+        LoadGameState();
+        if (!IsCorrectGuess)
+        {
+            HasGivenUp = true;
+            IsCorrectGuess = true;
+            var _ = TargetLanguage;
+            SaveGameState();
+        }
+        return Partial("_GamePartial", this);
+    }
     public string GetCellClass(bool match)
     {
         return match ? "bg-success text-white" : "bg-danger text-white";
@@ -197,6 +210,6 @@ public class GameState
     public string TargetSentence { get; set; }
     public List<GuessResult> Guesses { get; set; } = new();
     public bool IsCorrectGuess { get; set; }
-    //public bool HasGivenUp { get; set; }
+    public bool HasGivenUp { get; set; }
     public DateTime LastPlayDate { get; set; }
 }
